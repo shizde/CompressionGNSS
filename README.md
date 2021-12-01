@@ -7,21 +7,21 @@ Este projeto visa estudar e propor um método de compressão de dados que repres
 
 
 
-## Estrutura
+## Structure
 
-* 01.Analise
-  * Sistema de análise dos dados e métodos
+* 01.Analisys
+  * Compression methods analisys and results
 * 02.SimulacaoPreCompressao
-  * Simulação de um ambiente real e das funcionalidades a serem executadas. 
+  * Virtual environment simulation 
 * 03.SimulacaoPosCompressao
-  * Verificação dos dados de simulação 
+  * Verification of the simulation 
 * 04.Prototipo
-  * Desenvolvimento em ambiente real 
+  * Prototype development 
 
 
-## Recursos de Prototipagen
+## Prototype Ressources
 
-### Bibliotecas
+### Libraries
 * [mySD][1]
 * [TinyGPS++][2]
 * [ArduinoJson][3]
@@ -44,20 +44,22 @@ Este projeto visa estudar e propor um método de compressão de dados que repres
 
 
 
-## Protótipo
-### Esquema de Protótipo
+## Prortype
+### Prototype's Schema
 <div>
   <a href="https://ibb.co/2dFKKq1"><img src="https://i.ibb.co/SB6vvN4/ESP32-SCHEMATICS.jpg" alt="ESP32-SCHEMATICS" border="0" class="center"></a>
 </div>
 
 
-### Fluxograma de Funcionamento
+### Systems Fluxogram
 <div>
   <a href="https://ibb.co/2PBGwB5"><img src="https://i.ibb.co/0Z3Hk3Q/fluxograma.png" alt="fluxograma" border="0" class="center"></a>
 </div>
 
 
-## Publicações
+## Papers
+
+Cite as:
 
 * Rafael Perez, Valderi R. Q. Leithardt, Sérgio D. Correia, “Lossless Compression  Scheme for Efficient GNSS Data Transmission on IoT Devices”, Proc. of the International Conference on Electrical, Computer and Energy Technologies (ICECET), 9-10 December 2021, Cape Town-South Africa. 
 
