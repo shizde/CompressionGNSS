@@ -1,0 +1,1115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__op_s_8h" xml:lang="en-US">
+<title>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h File Reference</title>
+<indexterm><primary>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h</primary></indexterm>
+<programlisting>#include &lt;SPI.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_ST7789.h&gt;
+#include &lt;mySD.h&gt;
+#include &lt;TinyGPS++.h&gt;
+#include &lt;ArduinoJson.h&gt;
+#include &lt;Vector.h&gt;
+#include &lt;WiFi.h&gt;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__op_s_8h_1a566dec2de5e81d85ae24115e33a65b39">DEBUG_BAUD</link>   115200</para>
+
+<para>The baud rate for Serial Monitor. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>   Serial</para>
+
+<para>Specify the serial port in use for Serial Monitor. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c">TFT_CS</link>   -1</para>
+
+<para>Chip Selector for TFT Module. As it is not necessary, setted as <emphasis>-1</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a51529307207622c113ff0d584536be13">TFT_DC</link>   2</para>
+
+<para>Data/Command pin for TFT Module. Pin used: <emphasis>2</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1ab40e9918d9141415a47e2a979292309c">TFT_RST</link>   4</para>
+
+<para>Reset pin for TFT Module. Pin used: <emphasis>4</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>   240</para>
+
+<para>Value for TFT screen width. Value: <emphasis>240</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434">TFT_HEIGHT</link>   240</para>
+
+<para>Value for TFT screen height. Value: <emphasis>240</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1aa867b0a73a4f34f297fde887eb0e02d3">SD_SS</link>   5</para>
+
+<para>Slave Select pin used for SD Card. Pin used: <emphasis>5</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a8dcea357504f4ef30b778aca40169c36">SD_CLK</link>   21</para>
+
+<para>Clock pin for SD Card. Pin used: <emphasis>21</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1afb087f7305dc744753834627d3f495d7">SD_MISO</link>   19</para>
+
+<para>Master Input/Slave Output pin for SD Card. Pin used: <emphasis>19</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a48f4a08c693ab4e9bf6f412a1b385ea8">SD_MOSI</link>   22</para>
+
+<para>Master Output /Slave Input pin for SD Card. Pin used: <emphasis>22</emphasis> . </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1adbf75b6d5089d8a5a4749c75e184d026">SD_FILE</link>   &quot;/InitTest.txt&quot;</para>
+
+<para>Name of SD Card file for storing data. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1af0875ffe69dbe45df3f85c1f720c3eee">GPS_BAUD</link>   9600</para>
+
+<para>Baud rate used for GPS Serial. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1adfce8fce13362d258032e7dcd5792c8d">SERIALGPS</link>   Serial2</para>
+
+<para>Serial in use for GPS. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1ad0c329adebc27917fc0a4f51079acf6a">SAMPLES</link>   30</para>
+
+<para>Max of samples accepted per file. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a08e8d4f4d48da2da0b9a2ae76fb2b0c5">stGPS</link>   (<link linkend="__op_s_8h_1aa630f6f3e4a8201838096525c715b6c0">stGPSDate</link> | <link linkend="__op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce">stGPSTime</link> | <link linkend="__op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc">stGPSLoc</link> | <link linkend="__op_s_8h_1af086262491848f261960bf0720d4313a">stGPSSat</link>)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1aa630f6f3e4a8201838096525c715b6c0">stGPSDate</link>   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000001) &gt;&gt; 0)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce">stGPSTime</link>   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000010) &gt;&gt; 1)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc">stGPSLoc</link>   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000100) &gt;&gt; 2)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1af086262491848f261960bf0720d4313a">stGPSSat</link>   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000001000) &gt;&gt; 3)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1af1805e455fb229bfdfaa628723283af2">setSTGPSDate</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000001)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8">resetSTGPSDate</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000001)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1ab99d405ea5eec324c9a773db658b2da1">setSTGPSTime</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000010)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39">resetSTGPSTime</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000010)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1aaa12eb6424ef80c7288691472bec4ac2">setSTGPSLoc</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000100)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1ae53952d7c3086668ff1f5fb810fae161">resetSTGPSLoc</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000100)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a63b6739c1274e0b3651a4b2a92c23677">setSTGPSSat</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000001000)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a49bd522d3fe822fc0b4002bcb73cc803">resetSTGPSSat</link>   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000001000)</para>
+
+<para>Error status word. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__op_s_8h_1a8e5dc897c2040f47c99af43917e9173c">intervalSTATUS</link>   10000</para>
+
+<para>Time interval between connections. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__op_s_8h_1ae9d001f539ecefd5e2e034a6ad776246">LCD_Inic</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1ae75884f299dfd15220383957da6d9ead">LCD_Backgroud</link> (void)</para>
+
+<para>Draw the screen background. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a1e8ba8d5efbab0a29b49d1af99a05e00">LCD_UpdateStatus</link> (int)</para>
+
+<para>Update Graphbox that shows if the system is storing data. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1aee78f42121e7aab95360f5ea7c5901d0">LCD_UpdateSamples</link> (int)</para>
+
+<para>Update Number of Samples receveid by GPS sensor and stored. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a2abd3681d73ac3a7cf4688bccf1de911">LCD_UpdateNextTime</link> (int)</para>
+
+<para>Update timer to receive a new sample and analyze it. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a79cddd5241b6bc3e0a252cd6f79dbfc7">LCD_UpdateOriSize</link> (int)</para>
+
+<para>Update and display the size of original trajectory file. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1ab99c7bad892698d8ea29233589a1fbd6">LCD_UpdateCompSize</link> (int)</para>
+
+<para>Update and display the size of compressed trajectory file. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a82455a245be28dfc68632daa6c234cb0">LCD_UpdateDate</link> (uint16_t, uint8_t, uint8_t)</para>
+
+<para>Update date information received from satellites. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a5819307614b440aa72ee8d161039ee5c">LCD_UpdateTime</link> (uint8_t, uint8_t, uint8_t)</para>
+
+<para>Update time information received from satellites. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a87da9f9d16ec376891d625d07458aa20">LCD_UpdateSat</link> (uint8_t s)</para>
+
+<para>Update Number of Satellites that sends data to the GPS Sensor. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link> (uint8_t s)</para>
+
+<para>Validate WIFI Status - Validate WiFi connection. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1ab4f2c014e134b5830124e6688f66bea8">LCD_UpdateSDStatus</link> (uint8_t s)</para>
+
+<para>Update SD Card Status - Validate SD Card functioning. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1aee327fd10efe55f51daaf3a5be1cd84d">LCD_UpdateGPSStatus</link> (uint8_t s)</para>
+
+<para>Update GPS Status - Validate received gps data. </para>
+</listitem>
+            <listitem><para>unsigned long <link linkend="__op_s_8h_1aa578e64be5caeebb44a3e0a26465836a">WIFI_RefreshSTATUS</link> (unsigned long c, unsigned long l)</para>
+
+<para>Verify if the WiFi is connected and update status. </para>
+</listitem>
+            <listitem><para>void <link linkend="__op_s_8h_1a4904ab58331456a7675fdf6fb95fc975">GPS_DataCollection</link> (void)</para>
+
+<para>Receive GPs data and process it. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>Adafruit_ST7789 <link linkend="__op_s_8h_1a626203b4a6bd96fc5af315008b59696a">tft</link></para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>char * <link linkend="__op_s_8h_1a0974771b2fba5718eed6eecd656aac59">ssid</link></para>
+
+<para>SSID Network 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>char * <link linkend="__op_s_8h_1a59460a3ff2c12443d1022e5cc0fba85c">password</link></para>
+
+<para>Network Password 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>TinyGPSPlus <link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__op_s_8h_1af88df719c3754304ec06a339337d06d5">sysError</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__op_s_8h_1a566dec2de5e81d85ae24115e33a65b39"/>    <section>
+    <title>DEBUG_BAUD</title>
+<indexterm><primary>DEBUG_BAUD</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>DEBUG_BAUD</secondary></indexterm>
+<para><computeroutput>#define DEBUG_BAUD   115200</computeroutput></para><para>
+
+<para>The baud rate for Serial Monitor. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1af0875ffe69dbe45df3f85c1f720c3eee"/>    <section>
+    <title>GPS_BAUD</title>
+<indexterm><primary>GPS_BAUD</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>GPS_BAUD</secondary></indexterm>
+<para><computeroutput>#define GPS_BAUD   9600</computeroutput></para><para>
+
+<para>Baud rate used for GPS Serial. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a8e5dc897c2040f47c99af43917e9173c"/>    <section>
+    <title>intervalSTATUS</title>
+<indexterm><primary>intervalSTATUS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>intervalSTATUS</secondary></indexterm>
+<para><computeroutput>#define intervalSTATUS   10000</computeroutput></para><para>
+
+<para>Time interval between connections. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8"/>    <section>
+    <title>resetSTGPSDate</title>
+<indexterm><primary>resetSTGPSDate</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>resetSTGPSDate</secondary></indexterm>
+<para><computeroutput>#define resetSTGPSDate   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000001)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1ae53952d7c3086668ff1f5fb810fae161"/>    <section>
+    <title>resetSTGPSLoc</title>
+<indexterm><primary>resetSTGPSLoc</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>resetSTGPSLoc</secondary></indexterm>
+<para><computeroutput>#define resetSTGPSLoc   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000100)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a49bd522d3fe822fc0b4002bcb73cc803"/>    <section>
+    <title>resetSTGPSSat</title>
+<indexterm><primary>resetSTGPSSat</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>resetSTGPSSat</secondary></indexterm>
+<para><computeroutput>#define resetSTGPSSat   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000001000)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39"/>    <section>
+    <title>resetSTGPSTime</title>
+<indexterm><primary>resetSTGPSTime</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>resetSTGPSTime</secondary></indexterm>
+<para><computeroutput>#define resetSTGPSTime   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; ~0b0000000000000010)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1ad0c329adebc27917fc0a4f51079acf6a"/>    <section>
+    <title>SAMPLES</title>
+<indexterm><primary>SAMPLES</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SAMPLES</secondary></indexterm>
+<para><computeroutput>#define SAMPLES   30</computeroutput></para><para>
+
+<para>Max of samples accepted per file. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a8dcea357504f4ef30b778aca40169c36"/>    <section>
+    <title>SD_CLK</title>
+<indexterm><primary>SD_CLK</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SD_CLK</secondary></indexterm>
+<para><computeroutput>#define SD_CLK   21</computeroutput></para><para>
+
+<para>Clock pin for SD Card. Pin used: <emphasis>21</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1adbf75b6d5089d8a5a4749c75e184d026"/>    <section>
+    <title>SD_FILE</title>
+<indexterm><primary>SD_FILE</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SD_FILE</secondary></indexterm>
+<para><computeroutput>#define SD_FILE   &quot;/InitTest.txt&quot;</computeroutput></para><para>
+
+<para>Name of SD Card file for storing data. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1afb087f7305dc744753834627d3f495d7"/>    <section>
+    <title>SD_MISO</title>
+<indexterm><primary>SD_MISO</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SD_MISO</secondary></indexterm>
+<para><computeroutput>#define SD_MISO   19</computeroutput></para><para>
+
+<para>Master Input/Slave Output pin for SD Card. Pin used: <emphasis>19</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a48f4a08c693ab4e9bf6f412a1b385ea8"/>    <section>
+    <title>SD_MOSI</title>
+<indexterm><primary>SD_MOSI</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SD_MOSI</secondary></indexterm>
+<para><computeroutput>#define SD_MOSI   22</computeroutput></para><para>
+
+<para>Master Output /Slave Input pin for SD Card. Pin used: <emphasis>22</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1aa867b0a73a4f34f297fde887eb0e02d3"/>    <section>
+    <title>SD_SS</title>
+<indexterm><primary>SD_SS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SD_SS</secondary></indexterm>
+<para><computeroutput>#define SD_SS   5</computeroutput></para><para>
+
+<para>Slave Select pin used for SD Card. Pin used: <emphasis>5</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a"/>    <section>
+    <title>SERIALDEBUG</title>
+<indexterm><primary>SERIALDEBUG</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SERIALDEBUG</secondary></indexterm>
+<para><computeroutput>#define SERIALDEBUG   Serial</computeroutput></para><para>
+
+<para>Specify the serial port in use for Serial Monitor. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1adfce8fce13362d258032e7dcd5792c8d"/>    <section>
+    <title>SERIALGPS</title>
+<indexterm><primary>SERIALGPS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>SERIALGPS</secondary></indexterm>
+<para><computeroutput>#define SERIALGPS   Serial2</computeroutput></para><para>
+
+<para>Serial in use for GPS. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1af1805e455fb229bfdfaa628723283af2"/>    <section>
+    <title>setSTGPSDate</title>
+<indexterm><primary>setSTGPSDate</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>setSTGPSDate</secondary></indexterm>
+<para><computeroutput>#define setSTGPSDate   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000001)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1aaa12eb6424ef80c7288691472bec4ac2"/>    <section>
+    <title>setSTGPSLoc</title>
+<indexterm><primary>setSTGPSLoc</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>setSTGPSLoc</secondary></indexterm>
+<para><computeroutput>#define setSTGPSLoc   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000100)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a63b6739c1274e0b3651a4b2a92c23677"/>    <section>
+    <title>setSTGPSSat</title>
+<indexterm><primary>setSTGPSSat</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>setSTGPSSat</secondary></indexterm>
+<para><computeroutput>#define setSTGPSSat   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000001000)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1ab99d405ea5eec324c9a773db658b2da1"/>    <section>
+    <title>setSTGPSTime</title>
+<indexterm><primary>setSTGPSTime</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>setSTGPSTime</secondary></indexterm>
+<para><computeroutput>#define setSTGPSTime   (<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> |  0b0000000000000010)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a08e8d4f4d48da2da0b9a2ae76fb2b0c5"/>    <section>
+    <title>stGPS</title>
+<indexterm><primary>stGPS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>stGPS</secondary></indexterm>
+<para><computeroutput>#define stGPS   (<link linkend="__op_s_8h_1aa630f6f3e4a8201838096525c715b6c0">stGPSDate</link> | <link linkend="__op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce">stGPSTime</link> | <link linkend="__op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc">stGPSLoc</link> | <link linkend="__op_s_8h_1af086262491848f261960bf0720d4313a">stGPSSat</link>)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1aa630f6f3e4a8201838096525c715b6c0"/>    <section>
+    <title>stGPSDate</title>
+<indexterm><primary>stGPSDate</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>stGPSDate</secondary></indexterm>
+<para><computeroutput>#define stGPSDate   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000001) &gt;&gt; 0)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc"/>    <section>
+    <title>stGPSLoc</title>
+<indexterm><primary>stGPSLoc</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>stGPSLoc</secondary></indexterm>
+<para><computeroutput>#define stGPSLoc   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000100) &gt;&gt; 2)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1af086262491848f261960bf0720d4313a"/>    <section>
+    <title>stGPSSat</title>
+<indexterm><primary>stGPSSat</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>stGPSSat</secondary></indexterm>
+<para><computeroutput>#define stGPSSat   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000001000) &gt;&gt; 3)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce"/>    <section>
+    <title>stGPSTime</title>
+<indexterm><primary>stGPSTime</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>stGPSTime</secondary></indexterm>
+<para><computeroutput>#define stGPSTime   ((<link linkend="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14">sysStatus</link> &amp; 0b0000000000000010) &gt;&gt; 1)</computeroutput></para><para>
+
+<para>Error status word. </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c"/>    <section>
+    <title>TFT_CS</title>
+<indexterm><primary>TFT_CS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>TFT_CS</secondary></indexterm>
+<para><computeroutput>#define TFT_CS   -1</computeroutput></para><para>
+
+<para>Chip Selector for TFT Module. As it is not necessary, setted as <emphasis>-1</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a51529307207622c113ff0d584536be13"/>    <section>
+    <title>TFT_DC</title>
+<indexterm><primary>TFT_DC</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>TFT_DC</secondary></indexterm>
+<para><computeroutput>#define TFT_DC   2</computeroutput></para><para>
+
+<para>Data/Command pin for TFT Module. Pin used: <emphasis>2</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434"/>    <section>
+    <title>TFT_HEIGHT</title>
+<indexterm><primary>TFT_HEIGHT</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>TFT_HEIGHT</secondary></indexterm>
+<para><computeroutput>#define TFT_HEIGHT   240</computeroutput></para><para>
+
+<para>Value for TFT screen height. Value: <emphasis>240</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1ab40e9918d9141415a47e2a979292309c"/>    <section>
+    <title>TFT_RST</title>
+<indexterm><primary>TFT_RST</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>TFT_RST</secondary></indexterm>
+<para><computeroutput>#define TFT_RST   4</computeroutput></para><para>
+
+<para>Reset pin for TFT Module. Pin used: <emphasis>4</emphasis> . </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a83af0cb652728913ff58da7133c692ea"/>    <section>
+    <title>TFT_WIDTH</title>
+<indexterm><primary>TFT_WIDTH</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>TFT_WIDTH</secondary></indexterm>
+<para><computeroutput>#define TFT_WIDTH   240</computeroutput></para><para>
+
+<para>Value for TFT screen width. Value: <emphasis>240</emphasis> . </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__op_s_8h_1a4904ab58331456a7675fdf6fb95fc975"/>    <section>
+    <title>GPS_DataCollection()</title>
+<indexterm><primary>GPS_DataCollection</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>GPS_DataCollection</secondary></indexterm>
+<para><computeroutput>void GPS_DataCollection (void )</computeroutput></para><para>
+
+<para>Receive GPs data and process it. </para>
+</para>
+<programlisting>19 {
+20 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GPS&#32;data&#32;collection</emphasis>
+21 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<link linkend="__op_s_8h_1adfce8fce13362d258032e7dcd5792c8d">SERIALGPS</link>.available()&#32;&gt;&#32;0){
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.encode(<link linkend="__op_s_8h_1adfce8fce13362d258032e7dcd5792c8d">SERIALGPS</link>.read());
+23 &#32;&#32;&#32;&#32;}
+24 
+25 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Updates&#32;STATUS&#32;WORD</emphasis>
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.date.isValid())&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Date</emphasis>
+27 &#32;&#32;&#32;&#32;{
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8">resetSTGPSDate</link>;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.date.isUpdated())
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a82455a245be28dfc68632daa6c234cb0">LCD_UpdateDate</link>(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.date.year(),&#32;<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.date.month(),&#32;<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.date.day());
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+33 &#32;&#32;&#32;&#32;}
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+35 &#32;&#32;&#32;&#32;{
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1af1805e455fb229bfdfaa628723283af2">setSTGPSDate</link>;
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a82455a245be28dfc68632daa6c234cb0">LCD_UpdateDate</link>(0,0,0);
+38 &#32;&#32;&#32;&#32;}
+39 
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.time.isValid())&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Time</emphasis>
+41 &#32;&#32;&#32;&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39">resetSTGPSTime</link>;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.time.isUpdated())
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a5819307614b440aa72ee8d161039ee5c">LCD_UpdateTime</link>(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.time.hour(),&#32;<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.time.minute(),&#32;<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.time.second());
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+47 &#32;&#32;&#32;&#32;}
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+49 &#32;&#32;&#32;&#32;{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1ab99d405ea5eec324c9a773db658b2da1">setSTGPSTime</link>;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a5819307614b440aa72ee8d161039ee5c">LCD_UpdateTime</link>(0,0,0);
+52 &#32;&#32;&#32;&#32;}
+53 
+54 
+55 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.satellites.isValid())
+56 &#32;&#32;&#32;&#32;{
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.satellites.isUpdated())
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a87da9f9d16ec376891d625d07458aa20">LCD_UpdateSat</link>(<link linkend="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8">gps</link>.satellites.value());
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+61 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>
+62 &#32;&#32;&#32;&#32;{
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a87da9f9d16ec376891d625d07458aa20">LCD_UpdateSat</link>(0);
+64 &#32;&#32;&#32;&#32;}&#32;&#32;&#32;
+65 &#32;&#32;&#32;&#32;
+66 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1ae75884f299dfd15220383957da6d9ead"/>    <section>
+    <title>LCD_Backgroud()</title>
+<indexterm><primary>LCD_Backgroud</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_Backgroud</secondary></indexterm>
+<para><computeroutput>void LCD_Backgroud (void )</computeroutput></para><para>
+
+<para>Draw the screen background. </para>
+</para>
+<programlisting>158 {
+159 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Header</emphasis>
+160 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,0,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+161 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(40,5);
+162 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(2);
+163 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(<emphasis role="stringliteral">&quot;IoT&#32;Test&#32;Node&quot;</emphasis>);
+164 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Delimiters&#32;</emphasis>
+165 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,&#32;85,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+166 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,145,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+167 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Footer&#32;</emphasis>
+168 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,215,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+169 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Text&#32;Boxes</emphasis>
+170 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Samples&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Number&#32;of&#32;Samples</emphasis>
+171 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Next&#32;Sample&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Time&#32;to&#32;next&#32;sample</emphasis>
+172 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,10,<emphasis role="stringliteral">&quot;Compressed&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Original&#32;size</emphasis>
+173 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,10,<emphasis role="stringliteral">&quot;Original&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Compressed&#32;size</emphasis>
+174 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Text&#32;Satellite&#32;</emphasis>
+175 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(223,58,16,20,ST77XX_BLUE);
+176 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Images&#32;STATUS</emphasis>
+177 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(0);
+178 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1ab4f2c014e134b5830124e6688f66bea8">LCD_UpdateSDStatus</link>(0);
+179 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aee327fd10efe55f51daaf3a5be1cd84d">LCD_UpdateGPSStatus</link>(0);
+180 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1ae9d001f539ecefd5e2e034a6ad776246"/>    <section>
+    <title>LCD_Inic()</title>
+<indexterm><primary>LCD_Inic</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_Inic</secondary></indexterm>
+<para><computeroutput>void LCD_Inic (void )</computeroutput></para><programlisting>121 {
+122 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.init(<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,<link linkend="__op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434">TFT_HEIGHT</link>,SPI_MODE2);
+123 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setRotation(2);
+124 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillScreen(ST77XX_BLACK);
+125 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE);
+126 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextWrap(<emphasis role="keyword">false</emphasis>);
+127 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1ab99c7bad892698d8ea29233589a1fbd6"/>    <section>
+    <title>LCD_UpdateCompSize()</title>
+<indexterm><primary>LCD_UpdateCompSize</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateCompSize</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateCompSize (int V)</computeroutput></para><para>
+
+<para>Update and display the size of compressed trajectory file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Compressed Data File Size (MBs) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>275 {
+276 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+277 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a82455a245be28dfc68632daa6c234cb0"/>    <section>
+    <title>LCD_UpdateDate()</title>
+<indexterm><primary>LCD_UpdateDate</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateDate</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateDate (uint16_t y, uint8_t m, uint8_t d)</computeroutput></para><para>
+
+<para>Update date information received from satellites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>y</entry>
+                                <entry>
+<para>Current year data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>m</entry>
+                                <entry>
+<para>Current month data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>d</entry>
+                                <entry>
+<para>Current day data received from GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>297 {
+298 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;data[18]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+299 &#32;&#32;&#32;&#32;
+300 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Once&#32;any&#32;field&#32;of&#32;the&#32;date&#32;is&#32;less&#32;than&#32;10,&#32;the&#32;information&#32;received&#32;would&#32;have&#32;only&#32;one&#32;character.</emphasis>
+301 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;order&#32;to&#32;standardize&#32;the&#32;data,&#32;a&#32;0&#32;would&#32;be&#32;added&#32;before&#32;the&#32;number.</emphasis>
+302 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zyear[2];
+303 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zmonth[2];
+304 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zday[2];
+305 &#32;&#32;&#32;&#32;
+306 &#32;&#32;&#32;&#32;
+307 &#32;&#32;&#32;&#32;(y&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zyear,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;&#32;:&#32;(strcpy(zyear,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+308 &#32;&#32;&#32;&#32;(m&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zmonth,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zmonth,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+309 &#32;&#32;&#32;&#32;(d&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zday,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;&#32;&#32;:&#32;(strcpy(zday,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+310 &#32;&#32;&#32;&#32;
+311 &#32;&#32;&#32;&#32;sprintf(data,<emphasis role="stringliteral">&quot;%s%d/%s%d/%s%d&quot;</emphasis>,&#32;zy,&#32;y,&#32;zm,&#32;m,&#32;zd,&#32;d);
+312 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(5,&#32;220,&#32;data);
+313 &#32;&#32;&#32;&#32;
+314 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1aee327fd10efe55f51daaf3a5be1cd84d"/>    <section>
+    <title>LCD_UpdateGPSStatus()</title>
+<indexterm><primary>LCD_UpdateGPSStatus</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateGPSStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateGPSStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Update GPS Status - Validate received gps data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>188 {
+189 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(195,40,BMP_gps&#32;&#32;,32,32,ST77XX_BLACK,ST77XX_WHITE);
+190 &#32;&#32;&#32;&#32;
+191 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+192 &#32;&#32;&#32;&#32;{
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(195,40,32,32);
+194 &#32;&#32;&#32;&#32;}
+195 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a2abd3681d73ac3a7cf4688bccf1de911"/>    <section>
+    <title>LCD_UpdateNextTime()</title>
+<indexterm><primary>LCD_UpdateNextTime</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateNextTime</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateNextTime (int V)</computeroutput></para><para>
+
+<para>Update timer to receive a new sample and analyze it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Time to next sample </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>255 {
+256 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+257 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a79cddd5241b6bc3e0a252cd6f79dbfc7"/>    <section>
+    <title>LCD_UpdateOriSize()</title>
+<indexterm><primary>LCD_UpdateOriSize</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateOriSize</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateOriSize (int V)</computeroutput></para><para>
+
+<para>Update and display the size of original trajectory file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Original Data File Size (MBs) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>265 {
+266 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+267 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1aee78f42121e7aab95360f5ea7c5901d0"/>    <section>
+    <title>LCD_UpdateSamples()</title>
+<indexterm><primary>LCD_UpdateSamples</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateSamples</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSamples (int V)</computeroutput></para><para>
+
+<para>Update Number of Samples receveid by GPS sensor and stored. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Number of samples stored in current process </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>245 {
+246 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+247 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a87da9f9d16ec376891d625d07458aa20"/>    <section>
+    <title>LCD_UpdateSat()</title>
+<indexterm><primary>LCD_UpdateSat</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateSat</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSat (uint8_t s)</computeroutput></para><para>
+
+<para>Update Number of Satellites that sends data to the GPS Sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Number of satellites reached by the GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>231 {
+232 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;sat[3];
+233 &#32;&#32;&#32;&#32;
+234 &#32;&#32;&#32;&#32;sprintf(sat,<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,s);
+235 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(226,&#32;61,&#32;sat);
+236 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1ab4f2c014e134b5830124e6688f66bea8"/>    <section>
+    <title>LCD_UpdateSDStatus()</title>
+<indexterm><primary>LCD_UpdateSDStatus</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateSDStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSDStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Update SD Card Status - Validate SD Card functioning. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>203 {
+204 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(162,40,BMP_sd&#32;&#32;&#32;,32,32,ST77XX_BLACK,ST77XX_WHITE);
+205 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+206 &#32;&#32;&#32;&#32;{
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(162,40,32,32);
+208 &#32;&#32;&#32;&#32;}
+209 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a1e8ba8d5efbab0a29b49d1af99a05e00"/>    <section>
+    <title>LCD_UpdateStatus()</title>
+<indexterm><primary>LCD_UpdateStatus</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateStatus (int S)</computeroutput></para><para>
+
+<para>Update Graphbox that shows if the system is storing data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>S</entry>
+                                <entry>
+<para>Bit in order to set the Graph Box STATUS - ON/OFF </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>285 {
+286 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aa464db67221a3c67ac4e9585a27333b8">LCD_GraphBox</link>(15,30,100,50,&#32;S);&#32;&#32;
+287 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1a5819307614b440aa72ee8d161039ee5c"/>    <section>
+    <title>LCD_UpdateTime()</title>
+<indexterm><primary>LCD_UpdateTime</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateTime</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateTime (uint8_t h, uint8_t m, uint8_t s)</computeroutput></para><para>
+
+<para>Update time information received from satellites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>h</entry>
+                                <entry>
+<para>Current hour data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>m</entry>
+                                <entry>
+<para>Current minute data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Current second data received from GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>324 {
+325 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;hora[18]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+326 &#32;&#32;&#32;&#32;
+327 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Once&#32;any&#32;field&#32;of&#32;the&#32;date&#32;is&#32;less&#32;than&#32;10,&#32;the&#32;information&#32;received&#32;would&#32;have&#32;only&#32;one&#32;character.</emphasis>
+328 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;order&#32;to&#32;standardize&#32;the&#32;data,&#32;a&#32;0&#32;would&#32;be&#32;added&#32;before&#32;the&#32;number.</emphasis>
+329 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zhour[2];
+330 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zmin[2];
+331 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zsec[2];
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+333 &#32;&#32;&#32;&#32;(h&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zhour,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zhour,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+334 &#32;&#32;&#32;&#32;(m&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zmin,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zmin,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+335 &#32;&#32;&#32;&#32;(s&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zsec,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zsec,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+336 &#32;&#32;&#32;&#32;
+337 &#32;&#32;&#32;&#32;sprintf(hora,&#32;<emphasis role="stringliteral">&quot;%s%d:%s%d:%s%d&quot;</emphasis>,&#32;zhour,&#32;h,&#32;zmin,&#32;m,&#32;zsec,&#32;s);
+338 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(140,&#32;220,&#32;hora);
+339 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef"/>    <section>
+    <title>LCD_UpdateWIFIStatus()</title>
+<indexterm><primary>LCD_UpdateWIFIStatus</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>LCD_UpdateWIFIStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateWIFIStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Validate WIFI Status - Validate WiFi connection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>217 {
+218 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(125,40,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_WHITE);
+219 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+220 &#32;&#32;&#32;&#32;{
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(125,40,31,31);
+222 &#32;&#32;&#32;&#32;}
+223 }
+</programlisting>    </section><anchor xml:id="__op_s_8h_1aa578e64be5caeebb44a3e0a26465836a"/>    <section>
+    <title>WIFI_RefreshSTATUS()</title>
+<indexterm><primary>WIFI_RefreshSTATUS</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>WIFI_RefreshSTATUS</secondary></indexterm>
+<para><computeroutput>unsigned long WIFI_RefreshSTATUS (unsigned long c, unsigned long l)</computeroutput></para><para>
+
+<para>Verify if the WiFi is connected and update status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry>
+<para>Current time clock </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>l</entry>
+                                <entry>
+<para>Last updated time clock </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>32 {
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;r;
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(c&#32;-&#32;l&#32;&gt;=<link linkend="__op_s_8h_1a8e5dc897c2040f47c99af43917e9173c">intervalSTATUS</link>)&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(WiFi.status()&#32;!=&#32;WL_CONNECTED)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;WiFi&#32;with&#32;2&#32;minutes&#32;refresh&#32;interval</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(0);
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;WiFi&#32;Lost&#32;connection&quot;</emphasis>);
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WiFi.begin(<link linkend="__o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59">ssid</link>,&#32;<link linkend="__o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c">password</link>);
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(WiFi.status()&#32;!=&#32;WL_CONNECTED)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Waits&#32;for&#32;a&#32;new&#32;connection</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;delay(500);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.print(<emphasis role="stringliteral">&quot;.&quot;</emphasis>);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(1);
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;WiFi&#32;reconnected&quot;</emphasis>);
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;c;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(1);
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;l;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+55 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;r&#32;=&#32;l;
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+57 }
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8"/>    <section>
+    <title>gps</title>
+<indexterm><primary>gps</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>gps</secondary></indexterm>
+<para><computeroutput>TinyGPSPlus gps<computeroutput>[extern]</computeroutput></computeroutput></para>    </section><anchor xml:id="__op_s_8h_1a59460a3ff2c12443d1022e5cc0fba85c"/>    <section>
+    <title>password</title>
+<indexterm><primary>password</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>password</secondary></indexterm>
+<para><computeroutput>char* password<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>Network Password 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1a0974771b2fba5718eed6eecd656aac59"/>    <section>
+    <title>ssid</title>
+<indexterm><primary>ssid</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>ssid</secondary></indexterm>
+<para><computeroutput>char* ssid<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>SSID Network 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+    </section><anchor xml:id="__op_s_8h_1af88df719c3754304ec06a339337d06d5"/>    <section>
+    <title>sysError</title>
+<indexterm><primary>sysError</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>sysError</secondary></indexterm>
+<para><computeroutput>uint8_t sysError<computeroutput>[extern]</computeroutput></computeroutput></para>    </section><anchor xml:id="__op_s_8h_1aeda619d0851532061029b7c7cfbcca14"/>    <section>
+    <title>sysStatus</title>
+<indexterm><primary>sysStatus</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>sysStatus</secondary></indexterm>
+<para><computeroutput>uint16_t sysStatus<computeroutput>[extern]</computeroutput></computeroutput></para>    </section><anchor xml:id="__op_s_8h_1a626203b4a6bd96fc5af315008b59696a"/>    <section>
+    <title>tft</title>
+<indexterm><primary>tft</primary><secondary>OpS.h</secondary></indexterm>
+<indexterm><primary>OpS.h</primary><secondary>tft</secondary></indexterm>
+<para><computeroutput>Adafruit_ST7789 tft<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+</section>
+</section>

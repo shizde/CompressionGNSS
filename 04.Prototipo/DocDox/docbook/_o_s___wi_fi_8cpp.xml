@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___wi_fi_8cpp" xml:lang="en-US">
+<title>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp File Reference</title>
+<indexterm><primary>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp</primary></indexterm>
+<programlisting>#include &quot;OpS.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>unsigned long <link linkend="__o_s___wi_fi_8cpp_1aa578e64be5caeebb44a3e0a26465836a">WIFI_RefreshSTATUS</link> (unsigned long c, unsigned long l)</para>
+
+<para>Verify if the WiFi is connected and update status. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="__o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59">ssid</link> = &quot;Redmi 9T&quot;</para>
+
+<para>SSID Network 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>char * <link linkend="__o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c">password</link> = &quot;chocolate&quot;</para>
+
+<para>Network Password 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__o_s___wi_fi_8cpp_1aa578e64be5caeebb44a3e0a26465836a"/>    <section>
+    <title>WIFI_RefreshSTATUS()</title>
+<indexterm><primary>WIFI_RefreshSTATUS</primary><secondary>OS_WiFi.cpp</secondary></indexterm>
+<indexterm><primary>OS_WiFi.cpp</primary><secondary>WIFI_RefreshSTATUS</secondary></indexterm>
+<para><computeroutput>unsigned long WIFI_RefreshSTATUS (unsigned long c, unsigned long l)</computeroutput></para><para>
+
+<para>Verify if the WiFi is connected and update status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry>
+<para>Current time clock </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>l</entry>
+                                <entry>
+<para>Last updated time clock </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>32 {
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;r;
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(c&#32;-&#32;l&#32;&gt;=<link linkend="__op_s_8h_1a8e5dc897c2040f47c99af43917e9173c">intervalSTATUS</link>)&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(WiFi.status()&#32;!=&#32;WL_CONNECTED)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;WiFi&#32;with&#32;2&#32;minutes&#32;refresh&#32;interval</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(0);
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;WiFi&#32;Lost&#32;connection&quot;</emphasis>);
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WiFi.begin(<link linkend="__o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59">ssid</link>,&#32;<link linkend="__o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c">password</link>);
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(WiFi.status()&#32;!=&#32;WL_CONNECTED)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Waits&#32;for&#32;a&#32;new&#32;connection</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;delay(500);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.print(<emphasis role="stringliteral">&quot;.&quot;</emphasis>);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(1);
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1a60ba565131d290d6ebd1eda08c43432a">SERIALDEBUG</link>.println(<emphasis role="stringliteral">&quot;WiFi&#32;reconnected&quot;</emphasis>);
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;c;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(1);
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;l;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+55 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;r&#32;=&#32;l;
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+57 }
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c"/>    <section>
+    <title>password</title>
+<indexterm><primary>password</primary><secondary>OS_WiFi.cpp</secondary></indexterm>
+<indexterm><primary>OS_WiFi.cpp</primary><secondary>password</secondary></indexterm>
+<para><computeroutput>char* password = &quot;chocolate&quot;</computeroutput></para><para>
+
+<para>Network Password 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+    </section><anchor xml:id="__o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59"/>    <section>
+    <title>ssid</title>
+<indexterm><primary>ssid</primary><secondary>OS_WiFi.cpp</secondary></indexterm>
+<indexterm><primary>OS_WiFi.cpp</primary><secondary>ssid</secondary></indexterm>
+<para><computeroutput>char* ssid = &quot;Redmi 9T&quot;</computeroutput></para><para>
+
+<para>SSID Network 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+</section>
+</section>

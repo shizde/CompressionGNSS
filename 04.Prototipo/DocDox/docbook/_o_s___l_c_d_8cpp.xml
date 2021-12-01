@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___l_c_d_8cpp" xml:lang="en-US">
+<title>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp File Reference</title>
+<indexterm><primary>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp</primary></indexterm>
+<programlisting>#include &quot;OpS.h&quot;
+#include &quot;BMP.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link> (int X, int Y, int W, int H, int V, char *L, char B)</para>
+
+<para>Writes display text box and writes on it. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1aa464db67221a3c67ac4e9585a27333b8">LCD_GraphBox</link> (int X, int Y, int W, int H, int S)</para>
+
+<para>Draws ON/OFF indication box. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link> (int X, int Y, char *T)</para>
+
+<para>LCD Initialization. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1ae9d001f539ecefd5e2e034a6ad776246">LCD_Inic</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link> (int X, int Y, int W, int H)</para>
+
+<para>Draws cross to indicate NOT Status. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1ae75884f299dfd15220383957da6d9ead">LCD_Backgroud</link> (void)</para>
+
+<para>Draw the screen background. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1aee327fd10efe55f51daaf3a5be1cd84d">LCD_UpdateGPSStatus</link> (uint8_t s)</para>
+
+<para>Update GPS Status - Validate received gps data. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1ab4f2c014e134b5830124e6688f66bea8">LCD_UpdateSDStatus</link> (uint8_t s)</para>
+
+<para>Update SD Card Status - Validate SD Card functioning. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link> (uint8_t s)</para>
+
+<para>Validate WIFI Status - Validate WiFi connection. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a87da9f9d16ec376891d625d07458aa20">LCD_UpdateSat</link> (uint8_t s)</para>
+
+<para>Update Number of Satellites that sends data to the GPS Sensor. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1af074aff9e93a240e1a6170c71dad79ff">LCD_UpdateSamples</link> (int V)</para>
+
+<para>Update Number of Samples receveid by GPS sensor and stored. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a60194d4829deb96ff00f185d8b0a8180">LCD_UpdateNextTime</link> (int V)</para>
+
+<para>Update timer to receive a new sample and analyze it. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a24d375f8648a2d2e14d5144d8cd9e3dc">LCD_UpdateOriSize</link> (int V)</para>
+
+<para>Update and display the size of original trajectory file. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1aebdccd95357f44461cfacc9de767b62e">LCD_UpdateCompSize</link> (int V)</para>
+
+<para>Update and display the size of compressed trajectory file. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a63e97f0d73463fe4cf183858385bda2a">LCD_UpdateStatus</link> (int S)</para>
+
+<para>Update Graphbox that shows if the system is storing data. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1a5923a0da47fbebbdce5fca68fe112c56">LCD_UpdateDate</link> (uint16_t y, uint8_t m, uint8_t d)</para>
+
+<para>Update date information received from satellites. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d_8cpp_1aef508816917ae0500f92c04c9d044290">LCD_UpdateTime</link> (uint8_t h, uint8_t m, uint8_t s)</para>
+
+<para>Update time information received from satellites. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>Adafruit_ST7789 <link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link> = Adafruit_ST7789(<link linkend="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c">TFT_CS</link>, <link linkend="__op_s_8h_1a51529307207622c113ff0d584536be13">TFT_DC</link>, <link linkend="__op_s_8h_1ab40e9918d9141415a47e2a979292309c">TFT_RST</link>)</para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__o_s___l_c_d_8cpp_1ae75884f299dfd15220383957da6d9ead"/>    <section>
+    <title>LCD_Backgroud()</title>
+<indexterm><primary>LCD_Backgroud</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_Backgroud</secondary></indexterm>
+<para><computeroutput>void LCD_Backgroud (void )</computeroutput></para><para>
+
+<para>Draw the screen background. </para>
+</para>
+<programlisting>158 {
+159 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Header</emphasis>
+160 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,0,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+161 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(40,5);
+162 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(2);
+163 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(<emphasis role="stringliteral">&quot;IoT&#32;Test&#32;Node&quot;</emphasis>);
+164 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Delimiters&#32;</emphasis>
+165 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,&#32;85,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+166 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,145,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+167 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Footer&#32;</emphasis>
+168 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,215,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+169 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Text&#32;Boxes</emphasis>
+170 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Samples&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Number&#32;of&#32;Samples</emphasis>
+171 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Next&#32;Sample&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Time&#32;to&#32;next&#32;sample</emphasis>
+172 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,10,<emphasis role="stringliteral">&quot;Compressed&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Original&#32;size</emphasis>
+173 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,10,<emphasis role="stringliteral">&quot;Original&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Compressed&#32;size</emphasis>
+174 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Text&#32;Satellite&#32;</emphasis>
+175 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(223,58,16,20,ST77XX_BLUE);
+176 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;brief&#32;Images&#32;STATUS</emphasis>
+177 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aa5fe323b16d95b54985b08cf06d5e4ef">LCD_UpdateWIFIStatus</link>(0);
+178 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1ab4f2c014e134b5830124e6688f66bea8">LCD_UpdateSDStatus</link>(0);
+179 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aee327fd10efe55f51daaf3a5be1cd84d">LCD_UpdateGPSStatus</link>(0);
+180 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007"/>    <section>
+    <title>LCD_Cross()</title>
+<indexterm><primary>LCD_Cross</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_Cross</secondary></indexterm>
+<para><computeroutput>void LCD_Cross (int X, int Y, int W, int H)</computeroutput></para><para>
+
+<para>Draws cross to indicate NOT Status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>X</entry>
+                                <entry>
+<para>x coordinate to begin the cross </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>Y</entry>
+                                <entry>
+<para>y coordinate to begin the cross </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>W</entry>
+                                <entry>
+<para>width of cross </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>H</entry>
+                                <entry>
+<para>height of cross </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>138 {
+139 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Line&#32;&quot;\&quot;</emphasis>
+140 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X&#32;&#32;,&#32;&#32;Y,&#32;&#32;X+W,&#32;&#32;Y+H,ST77XX_RED);
+141 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+1,&#32;&#32;Y,&#32;&#32;X+W,Y+H-1,ST77XX_RED);
+142 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X&#32;&#32;,Y+1,X+W-1,&#32;&#32;Y+H,ST77XX_RED);
+143 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+2,&#32;&#32;Y,&#32;&#32;X+W,Y+H-2,ST77XX_RED);
+144 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X&#32;&#32;,Y+2,X+W-2,&#32;&#32;Y+H,ST77XX_RED);
+145 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Line&#32;&quot;/&quot;</emphasis>
+146 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+W&#32;&#32;,&#32;&#32;Y,&#32;&#32;X,&#32;&#32;Y+H,ST77XX_RED);
+147 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+W-1,&#32;&#32;Y,&#32;&#32;X,Y+H-1,ST77XX_RED);
+148 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+W&#32;&#32;,Y+1,X+1,&#32;&#32;Y+H,ST77XX_RED);
+149 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+W-2,&#32;&#32;Y,&#32;&#32;X,Y+H-2,ST77XX_RED);
+150 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.writeLine(X+W&#32;&#32;,Y+2,X+2&#32;&#32;,Y+H,ST77XX_RED);
+151 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1aa464db67221a3c67ac4e9585a27333b8"/>    <section>
+    <title>LCD_GraphBox()</title>
+<indexterm><primary>LCD_GraphBox</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_GraphBox</secondary></indexterm>
+<para><computeroutput>void LCD_GraphBox (int X, int Y, int W, int H, int S)</computeroutput></para><para>
+
+<para>Draws ON/OFF indication box. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>X</entry>
+                                <entry>
+<para>x coordinate to begin the box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>Y</entry>
+                                <entry>
+<para>y coordinate to begin the box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>W</entry>
+                                <entry>
+<para>width of box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>H</entry>
+                                <entry>
+<para>height of box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>S</entry>
+                                <entry>
+<para>boolean to display status (ON/OFF) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>66 {
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*txt;
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;bC;
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;tC;
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;dx;
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Outline</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X,Y,W,H,ST77XX_BLUE);
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S==1)
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;txt&#32;=&#32;<emphasis role="stringliteral">&quot;ON&quot;</emphasis>;
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bC&#32;=&#32;ST77XX_GREEN;
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tC&#32;=&#32;ST77XX_BLACK;
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dx&#32;=&#32;25;
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;txt&#32;=&#32;<emphasis role="stringliteral">&quot;OFF&quot;</emphasis>;
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bC&#32;=&#32;ST77XX_RED;
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tC&#32;=&#32;ST77XX_WHITE;&#32;&#32;
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dx&#32;=&#32;18;
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+88 &#32;&#32;&#32;&#32;
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(4);
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(tC);
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(X+2,Y+2,W-4,H-4,bC);
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+dx,Y+10);
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(txt);
+94 &#32;&#32;&#32;&#32;
+95 };
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1ae9d001f539ecefd5e2e034a6ad776246"/>    <section>
+    <title>LCD_Inic()</title>
+<indexterm><primary>LCD_Inic</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_Inic</secondary></indexterm>
+<para><computeroutput>void LCD_Inic (void )</computeroutput></para><programlisting>121 {
+122 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.init(<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,<link linkend="__op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434">TFT_HEIGHT</link>,SPI_MODE2);
+123 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setRotation(2);
+124 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillScreen(ST77XX_BLACK);
+125 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE);
+126 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextWrap(<emphasis role="keyword">false</emphasis>);
+127 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d"/>    <section>
+    <title>LCD_Text()</title>
+<indexterm><primary>LCD_Text</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_Text</secondary></indexterm>
+<para><computeroutput>void LCD_Text (int X, int Y, char * T)</computeroutput></para><para>
+
+<para>LCD Initialization. </para>
+</para>
+
+<para>Write text on display.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>X</entry>
+                                <entry>
+<para>x coordinate to begin the text </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>Y</entry>
+                                <entry>
+<para>y coordinate to begin the text </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>T</entry>
+                                <entry>
+<para>text </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>105 {
+106 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X,Y);
+107 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(2);
+108 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE,ST77XX_BLUE);
+109 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(T);
+110 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f"/>    <section>
+    <title>LCD_TextBox()</title>
+<indexterm><primary>LCD_TextBox</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_TextBox</secondary></indexterm>
+<para><computeroutput>void LCD_TextBox (int X, int Y, int W, int H, int V, char * L, char B)</computeroutput></para><para>
+
+<para>Writes display text box and writes on it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>X</entry>
+                                <entry>
+<para>x coordinate to begin the Text Box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>Y</entry>
+                                <entry>
+<para>y coordinate to begin the Text Box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>W</entry>
+                                <entry>
+<para>width of Text Box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>H</entry>
+                                <entry>
+<para>height of Text Box </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>text </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>L</entry>
+                                <entry>
+<para>header text </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>B</entry>
+                                <entry>
+<para>background </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>36 {
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(B==1)
+38 &#32;&#32;&#32;&#32;{
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Outline</emphasis>
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X,Y,W,H,ST77XX_BLUE);
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Header</emphasis>
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(X,Y,W,10,ST77XX_BLUE);
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(1);
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+5,Y);
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(L);
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>{
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Value</emphasis>
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE,ST77XX_BLACK);
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+45,Y+15);
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(4);
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(V);
+54 &#32;&#32;&#32;&#32;}
+55 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1aebdccd95357f44461cfacc9de767b62e"/>    <section>
+    <title>LCD_UpdateCompSize()</title>
+<indexterm><primary>LCD_UpdateCompSize</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateCompSize</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateCompSize (int V)</computeroutput></para><para>
+
+<para>Update and display the size of compressed trajectory file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Compressed Data File Size (MBs) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>275 {
+276 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+277 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a5923a0da47fbebbdce5fca68fe112c56"/>    <section>
+    <title>LCD_UpdateDate()</title>
+<indexterm><primary>LCD_UpdateDate</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateDate</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateDate (uint16_t y, uint8_t m, uint8_t d)</computeroutput></para><para>
+
+<para>Update date information received from satellites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>y</entry>
+                                <entry>
+<para>Current year data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>m</entry>
+                                <entry>
+<para>Current month data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>d</entry>
+                                <entry>
+<para>Current day data received from GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>297 {
+298 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;data[18]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+299 &#32;&#32;&#32;&#32;
+300 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Once&#32;any&#32;field&#32;of&#32;the&#32;date&#32;is&#32;less&#32;than&#32;10,&#32;the&#32;information&#32;received&#32;would&#32;have&#32;only&#32;one&#32;character.</emphasis>
+301 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;order&#32;to&#32;standardize&#32;the&#32;data,&#32;a&#32;0&#32;would&#32;be&#32;added&#32;before&#32;the&#32;number.</emphasis>
+302 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zyear[2];
+303 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zmonth[2];
+304 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zday[2];
+305 &#32;&#32;&#32;&#32;
+306 &#32;&#32;&#32;&#32;
+307 &#32;&#32;&#32;&#32;(y&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zyear,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;&#32;:&#32;(strcpy(zyear,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+308 &#32;&#32;&#32;&#32;(m&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zmonth,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zmonth,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+309 &#32;&#32;&#32;&#32;(d&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zday,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;&#32;&#32;:&#32;(strcpy(zday,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+310 &#32;&#32;&#32;&#32;
+311 &#32;&#32;&#32;&#32;sprintf(data,<emphasis role="stringliteral">&quot;%s%d/%s%d/%s%d&quot;</emphasis>,&#32;zy,&#32;y,&#32;zm,&#32;m,&#32;zd,&#32;d);
+312 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(5,&#32;220,&#32;data);
+313 &#32;&#32;&#32;&#32;
+314 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1aee327fd10efe55f51daaf3a5be1cd84d"/>    <section>
+    <title>LCD_UpdateGPSStatus()</title>
+<indexterm><primary>LCD_UpdateGPSStatus</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateGPSStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateGPSStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Update GPS Status - Validate received gps data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>188 {
+189 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(195,40,BMP_gps&#32;&#32;,32,32,ST77XX_BLACK,ST77XX_WHITE);
+190 &#32;&#32;&#32;&#32;
+191 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+192 &#32;&#32;&#32;&#32;{
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(195,40,32,32);
+194 &#32;&#32;&#32;&#32;}
+195 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a60194d4829deb96ff00f185d8b0a8180"/>    <section>
+    <title>LCD_UpdateNextTime()</title>
+<indexterm><primary>LCD_UpdateNextTime</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateNextTime</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateNextTime (int V)</computeroutput></para><para>
+
+<para>Update timer to receive a new sample and analyze it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Time to next sample </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>255 {
+256 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+257 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a24d375f8648a2d2e14d5144d8cd9e3dc"/>    <section>
+    <title>LCD_UpdateOriSize()</title>
+<indexterm><primary>LCD_UpdateOriSize</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateOriSize</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateOriSize (int V)</computeroutput></para><para>
+
+<para>Update and display the size of original trajectory file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Original Data File Size (MBs) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>265 {
+266 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+267 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1af074aff9e93a240e1a6170c71dad79ff"/>    <section>
+    <title>LCD_UpdateSamples()</title>
+<indexterm><primary>LCD_UpdateSamples</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateSamples</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSamples (int V)</computeroutput></para><para>
+
+<para>Update Number of Samples receveid by GPS sensor and stored. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>V</entry>
+                                <entry>
+<para>Number of samples stored in current process </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>245 {
+246 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+247 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a87da9f9d16ec376891d625d07458aa20"/>    <section>
+    <title>LCD_UpdateSat()</title>
+<indexterm><primary>LCD_UpdateSat</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateSat</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSat (uint8_t s)</computeroutput></para><para>
+
+<para>Update Number of Satellites that sends data to the GPS Sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Number of satellites reached by the GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>231 {
+232 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;sat[3];
+233 &#32;&#32;&#32;&#32;
+234 &#32;&#32;&#32;&#32;sprintf(sat,<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,s);
+235 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(226,&#32;61,&#32;sat);
+236 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1ab4f2c014e134b5830124e6688f66bea8"/>    <section>
+    <title>LCD_UpdateSDStatus()</title>
+<indexterm><primary>LCD_UpdateSDStatus</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateSDStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateSDStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Update SD Card Status - Validate SD Card functioning. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>203 {
+204 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(162,40,BMP_sd&#32;&#32;&#32;,32,32,ST77XX_BLACK,ST77XX_WHITE);
+205 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+206 &#32;&#32;&#32;&#32;{
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(162,40,32,32);
+208 &#32;&#32;&#32;&#32;}
+209 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1a63e97f0d73463fe4cf183858385bda2a"/>    <section>
+    <title>LCD_UpdateStatus()</title>
+<indexterm><primary>LCD_UpdateStatus</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateStatus (int S)</computeroutput></para><para>
+
+<para>Update Graphbox that shows if the system is storing data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>S</entry>
+                                <entry>
+<para>Bit in order to set the Graph Box STATUS - ON/OFF </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>285 {
+286 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1aa464db67221a3c67ac4e9585a27333b8">LCD_GraphBox</link>(15,30,100,50,&#32;S);&#32;&#32;
+287 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1aef508816917ae0500f92c04c9d044290"/>    <section>
+    <title>LCD_UpdateTime()</title>
+<indexterm><primary>LCD_UpdateTime</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateTime</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateTime (uint8_t h, uint8_t m, uint8_t s)</computeroutput></para><para>
+
+<para>Update time information received from satellites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>h</entry>
+                                <entry>
+<para>Current hour data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>m</entry>
+                                <entry>
+<para>Current minute data received from GPS sensor </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Current second data received from GPS sensor </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>324 {
+325 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;hora[18]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+326 &#32;&#32;&#32;&#32;
+327 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Once&#32;any&#32;field&#32;of&#32;the&#32;date&#32;is&#32;less&#32;than&#32;10,&#32;the&#32;information&#32;received&#32;would&#32;have&#32;only&#32;one&#32;character.</emphasis>
+328 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;order&#32;to&#32;standardize&#32;the&#32;data,&#32;a&#32;0&#32;would&#32;be&#32;added&#32;before&#32;the&#32;number.</emphasis>
+329 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zhour[2];
+330 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zmin[2];
+331 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zsec[2];
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+333 &#32;&#32;&#32;&#32;(h&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zhour,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zhour,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+334 &#32;&#32;&#32;&#32;(m&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zmin,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zmin,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+335 &#32;&#32;&#32;&#32;(s&#32;&lt;&#32;10)&#32;?&#32;(strcpy(zsec,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>))&#32;:&#32;(strcpy(zsec,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>));
+336 &#32;&#32;&#32;&#32;
+337 &#32;&#32;&#32;&#32;sprintf(hora,&#32;<emphasis role="stringliteral">&quot;%s%d:%s%d:%s%d&quot;</emphasis>,&#32;zhour,&#32;h,&#32;zmin,&#32;m,&#32;zsec,&#32;s);
+338 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(140,&#32;220,&#32;hora);
+339 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d_8cpp_1aa5fe323b16d95b54985b08cf06d5e4ef"/>    <section>
+    <title>LCD_UpdateWIFIStatus()</title>
+<indexterm><primary>LCD_UpdateWIFIStatus</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>LCD_UpdateWIFIStatus</secondary></indexterm>
+<para><computeroutput>void LCD_UpdateWIFIStatus (uint8_t s)</computeroutput></para><para>
+
+<para>Validate WIFI Status - Validate WiFi connection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<programlisting>217 {
+218 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(125,40,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_WHITE);
+219 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s==0)
+220 &#32;&#32;&#32;&#32;{
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007">LCD_Cross</link>(125,40,31,31);
+222 &#32;&#32;&#32;&#32;}
+223 }
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a"/>    <section>
+    <title>tft</title>
+<indexterm><primary>tft</primary><secondary>OS_LCD.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD.cpp</primary><secondary>tft</secondary></indexterm>
+<para><computeroutput>Adafruit_ST7789 tft = Adafruit_ST7789(<link linkend="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c">TFT_CS</link>, <link linkend="__op_s_8h_1a51529307207622c113ff0d584536be13">TFT_DC</link>, <link linkend="__op_s_8h_1ab40e9918d9141415a47e2a979292309c">TFT_RST</link>)</computeroutput></para><para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+</section>
+</section>

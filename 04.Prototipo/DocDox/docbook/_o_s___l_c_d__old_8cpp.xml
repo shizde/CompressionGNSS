@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___l_c_d__old_8cpp" xml:lang="en-US">
+<title>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp File Reference</title>
+<indexterm><primary>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp</primary></indexterm>
+<programlisting>#include &quot;OpS.h&quot;
+#include &quot;BMP.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link> (int X, int Y, int W, int H, int V, char *L, char B)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8">LCD_GraphBox</link> (int X, int Y, int W, int H, int S)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link> (int X, int Y, char *T)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1ae9d001f539ecefd5e2e034a6ad776246">LCD_Inic</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1ae75884f299dfd15220383957da6d9ead">LCD_Backgroud</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a3171d245994523f6fde19bd987c076eb">UpdateSamples</link> (int V)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1afe5edfffdfa43a46f9a0ad320c5530c8">UpdateNextTime</link> (int V)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a97e7bc87826e05c1777fcc001d4161d4">UpdateOriSize</link> (int V)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a7e8480f37dd93b892acd332df02f17da">UpdateCompSize</link> (int V)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a6de1bb0f0b3d60e344eec8423a363333">UpdateStatus</link> (int S)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a5dc89d5e48e7670f231aea95fa0cb1cd">UpdateDate</link> (uint16_t y, uint8_t m, uint8_t d)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1a6ae54514ff4f83746682da800ae4f6b1">UpdateTime</link> (uint8_t h, uint8_t m, uint8_t s)</para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___l_c_d__old_8cpp_1aabced063fbcba43eff6e132820af67e5">UpdateSat</link> (uint8_t s)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>Adafruit_ST7789 <link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link> = Adafruit_ST7789(<link linkend="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c">TFT_CS</link>, <link linkend="__op_s_8h_1a51529307207622c113ff0d584536be13">TFT_DC</link>, <link linkend="__op_s_8h_1ab40e9918d9141415a47e2a979292309c">TFT_RST</link>)</para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__o_s___l_c_d__old_8cpp_1ae75884f299dfd15220383957da6d9ead"/>    <section>
+    <title>LCD_Backgroud()</title>
+<indexterm><primary>LCD_Backgroud</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>LCD_Backgroud</secondary></indexterm>
+<para><computeroutput>void LCD_Backgroud (void )</computeroutput></para>
+<para>Initiable Display Background 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<programlisting>89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+90 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Header</emphasis>
+91 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,0,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+92 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(40,5);
+93 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(2);
+94 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(<emphasis role="stringliteral">&quot;IoT&#32;Test&#32;Node&quot;</emphasis>);
+95 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Delimiters</emphasis>
+96 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,&#32;85,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+97 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawFastHLine(0,145,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,ST77XX_BLUE);
+98 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Footer</emphasis>
+99 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(0,215,<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,25,ST77XX_BLUE);
+100 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Text&#32;Boxes</emphasis>
+101 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Samples&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Number&#32;of&#32;Samples</emphasis>
+102 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;10,<emphasis role="stringliteral">&quot;Next&#32;Sample&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Time&#32;to&#32;next&#32;sample</emphasis>
+103 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,10,<emphasis role="stringliteral">&quot;Compressed&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Original&#32;size</emphasis>
+104 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,10,<emphasis role="stringliteral">&quot;Original&#32;Size&quot;</emphasis>,1);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Compressed&#32;size</emphasis>
+105 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Images</emphasis>
+106 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(150,30,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_BLUE);
+107 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawBitmap(185,30,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_WHITE);
+108 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8"/>    <section>
+    <title>LCD_GraphBox()</title>
+<indexterm><primary>LCD_GraphBox</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>LCD_GraphBox</secondary></indexterm>
+<para><computeroutput>void LCD_GraphBox (int X, int Y, int W, int H, int S)</computeroutput></para><programlisting>38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*txt;
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;bC;
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;tC;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;dx;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Outline</emphasis>
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X,Y,W,H,ST77XX_BLUE);
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(S==1)
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;txt&#32;=&#32;<emphasis role="stringliteral">&quot;ON&quot;</emphasis>;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bC&#32;=&#32;ST77XX_GREEN;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tC&#32;=&#32;ST77XX_BLACK;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dx&#32;=&#32;25;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;txt&#32;=&#32;<emphasis role="stringliteral">&quot;OFF&quot;</emphasis>;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bC&#32;=&#32;ST77XX_RED;
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tC&#32;=&#32;ST77XX_WHITE;&#32;&#32;
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dx&#32;=&#32;18;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+60 &#32;&#32;&#32;&#32;
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(4);
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(tC);
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(X+2,Y+2,W-4,H-4,bC);
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+dx,Y+10);
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(txt);
+66 &#32;&#32;&#32;&#32;
+67 };
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1ae9d001f539ecefd5e2e034a6ad776246"/>    <section>
+    <title>LCD_Inic()</title>
+<indexterm><primary>LCD_Inic</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>LCD_Inic</secondary></indexterm>
+<para><computeroutput>void LCD_Inic (void )</computeroutput></para>
+<para>LCD Initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<programlisting>81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+82 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.init(<link linkend="__op_s_8h_1a83af0cb652728913ff58da7133c692ea">TFT_WIDTH</link>,<link linkend="__op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434">TFT_HEIGHT</link>,SPI_MODE2);
+83 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setRotation(2);
+84 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillScreen(ST77XX_BLACK);
+85 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE);
+86 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextWrap(<emphasis role="keyword">false</emphasis>);
+87 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d"/>    <section>
+    <title>LCD_Text()</title>
+<indexterm><primary>LCD_Text</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>LCD_Text</secondary></indexterm>
+<para><computeroutput>void LCD_Text (int X, int Y, char * T)</computeroutput></para><programlisting>69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+70 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X,Y);
+71 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(2);
+72 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE,ST77XX_BLUE);
+73 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(T);
+74 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f"/>    <section>
+    <title>LCD_TextBox()</title>
+<indexterm><primary>LCD_TextBox</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>LCD_TextBox</secondary></indexterm>
+<para><computeroutput>void LCD_TextBox (int X, int Y, int W, int H, int V, char * L, char B)</computeroutput></para><programlisting>17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(B==1)
+19 &#32;&#32;&#32;&#32;{
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Outline</emphasis>
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X,Y,W,H,ST77XX_BLUE);
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Header</emphasis>
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE);
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.fillRect(X,Y,W,10,ST77XX_BLUE);
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(1);
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+5,Y);
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(L);
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>{
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Value</emphasis>
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextColor(ST77XX_WHITE,ST77XX_BLACK);
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setCursor(X+45,Y+15);
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.setTextSize(4);
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a">tft</link>.print(V);
+35 &#32;&#32;&#32;&#32;}
+36 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a7e8480f37dd93b892acd332df02f17da"/>    <section>
+    <title>UpdateCompSize()</title>
+<indexterm><primary>UpdateCompSize</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateCompSize</secondary></indexterm>
+<para><computeroutput>void UpdateCompSize (int V)</computeroutput></para><programlisting>122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+123 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+124 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a5dc89d5e48e7670f231aea95fa0cb1cd"/>    <section>
+    <title>UpdateDate()</title>
+<indexterm><primary>UpdateDate</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateDate</secondary></indexterm>
+<para><computeroutput>void UpdateDate (uint16_t y, uint8_t m, uint8_t d)</computeroutput></para><programlisting>130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+131 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;data[16]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+132 &#32;&#32;&#32;&#32;
+133 &#32;&#32;&#32;&#32;sprintf(data,<emphasis role="stringliteral">&quot;%d/%d/%d&quot;</emphasis>,y,m,d);
+134 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(5,&#32;220,&#32;data);
+135 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1afe5edfffdfa43a46f9a0ad320c5530c8"/>    <section>
+    <title>UpdateNextTime()</title>
+<indexterm><primary>UpdateNextTime</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateNextTime</secondary></indexterm>
+<para><computeroutput>void UpdateNextTime (int V)</computeroutput></para><programlisting>114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+115 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+116 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a97e7bc87826e05c1777fcc001d4161d4"/>    <section>
+    <title>UpdateOriSize()</title>
+<indexterm><primary>UpdateOriSize</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateOriSize</secondary></indexterm>
+<para><computeroutput>void UpdateOriSize (int V)</computeroutput></para><programlisting>118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+119 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(&#32;15,150,100,50,V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+120 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a3171d245994523f6fde19bd987c076eb"/>    <section>
+    <title>UpdateSamples()</title>
+<indexterm><primary>UpdateSamples</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateSamples</secondary></indexterm>
+<para><computeroutput>void UpdateSamples (int V)</computeroutput></para><programlisting>110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+111 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f">LCD_TextBox</link>(125,90,100,50,&#32;V,<emphasis role="stringliteral">&quot;&quot;</emphasis>,0);
+112 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1aabced063fbcba43eff6e132820af67e5"/>    <section>
+    <title>UpdateSat()</title>
+<indexterm><primary>UpdateSat</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateSat</secondary></indexterm>
+<para><computeroutput>void UpdateSat (uint8_t s)</computeroutput></para><programlisting>144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+145 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;sat[3];
+146 &#32;&#32;&#32;&#32;
+147 &#32;&#32;&#32;&#32;sprintf(sat,<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,s);
+148 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(125,&#32;50,&#32;sat);
+149 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a6de1bb0f0b3d60e344eec8423a363333"/>    <section>
+    <title>UpdateStatus()</title>
+<indexterm><primary>UpdateStatus</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateStatus</secondary></indexterm>
+<para><computeroutput>void UpdateStatus (int S)</computeroutput></para><programlisting>126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+127 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8">LCD_GraphBox</link>(15,30,100,50,&#32;S);&#32;&#32;
+128 }
+</programlisting>    </section><anchor xml:id="__o_s___l_c_d__old_8cpp_1a6ae54514ff4f83746682da800ae4f6b1"/>    <section>
+    <title>UpdateTime()</title>
+<indexterm><primary>UpdateTime</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>UpdateTime</secondary></indexterm>
+<para><computeroutput>void UpdateTime (uint8_t h, uint8_t m, uint8_t s)</computeroutput></para><programlisting>137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+138 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;hora[16]&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+139 &#32;&#32;&#32;&#32;
+140 &#32;&#32;&#32;&#32;sprintf(hora,<emphasis role="stringliteral">&quot;%d:%d:%d&quot;</emphasis>,h,m,s);
+141 &#32;&#32;&#32;&#32;<link linkend="__o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d">LCD_Text</link>(140,&#32;220,&#32;hora);
+142 }
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a"/>    <section>
+    <title>tft</title>
+<indexterm><primary>tft</primary><secondary>OS_LCD_old.cpp</secondary></indexterm>
+<indexterm><primary>OS_LCD_old.cpp</primary><secondary>tft</secondary></indexterm>
+<para><computeroutput>Adafruit_ST7789 tft = Adafruit_ST7789(<link linkend="__op_s_8h_1a5f4d46ae101b77df78010c506601c87c">TFT_CS</link>, <link linkend="__op_s_8h_1a51529307207622c113ff0d584536be13">TFT_DC</link>, <link linkend="__op_s_8h_1ab40e9918d9141415a47e2a979292309c">TFT_RST</link>)</computeroutput></para><para>
+
+<para>TFT variable initialization 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+</section>
+</section>
+</section>
