@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_teste___s_d_8ino" kind="file" language="C++">
+    <compoundname>Teste_SD.ino</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>GNSS<sp/>Lossless<sp/>Compression<sp/>Algorithm<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Created:<sp/>7/6/2021<sp/>12:39:59<sp/>PM</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Authors:<sp/>Rafael<sp/>Perez<sp/>&amp;<sp/>Sérgio<sp/>Correia</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Instituto<sp/>Politécnico<sp/>de<sp/>Portalegre</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*!<sp/>\file<sp/>Teste_SD.ino<sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Operating<sp/>System<sp/>Definitions</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;OpS.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">unsigned<sp/>long<sp/>lastSTATUS;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/************************************************************************/</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>Custom<sp/>Objects<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">/************************************************************************/</highlight></codeline>
+<codeline><highlight class="normal">/*!<sp/>\brief<sp/>GPS<sp/>variable<sp/>initialization<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">TinyGPSPlus<sp/>gps;</highlight></codeline>
+<codeline><highlight class="normal">/*!<sp/>\brief<sp/>System<sp/>Error<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">uint16_t<sp/>sysStatus<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">/*!<sp/>\brief<sp/>System<sp/>Status<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">uint8_t<sp/>sysError<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>setup()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Serial<sp/>DEBUG</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.begin(DEBUG_BAUD);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Serial<sp/>Debugger<sp/>Header<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;***<sp/>IoT<sp/>Test<sp/>Node<sp/>***&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//TFT<sp/>Initialization<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;ST7789<sp/>LCD<sp/>Controller&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;240x240<sp/>1.8\&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;TFT<sp/>Initializing...&quot;);<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_Inic();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;TFT<sp/>OK&quot;);<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_Backgroud();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//Initialize<sp/>GLOBAL<sp/>STATUS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateStatus(0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>SD<sp/>CARD<sp/>Initialization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;SD<sp/>Initializing...&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>(!SD.begin(SD_SS,<sp/>SD_MOSI,<sp/>SD_MISO,<sp/>SD_CLK))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;.&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(500);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;.&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;SD<sp/>Card<sp/>initialized.&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateSDStatus(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>WiFi<sp/>Initialization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;WiFi<sp/>Initializing...&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WiFi.begin(ssid,<sp/>password);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(500);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;.&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;.&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;WiFi<sp/>connected<sp/>to&quot;);<sp/>SERIALDEBUG.println(ssid);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;IP<sp/>address:<sp/>&quot;);<sp/>SERIALDEBUG.println(WiFi.localIP());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>long<sp/>rssi<sp/>=<sp/>WiFi.RSSI();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.print(&quot;RSSI:&quot;);<sp/>SERIALDEBUG.print(rssi);<sp/>SERIALDEBUG.println(&quot;<sp/>dBm&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WiFi.setAutoReconnect(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WiFi.persistent(true);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALDEBUG.println(&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateWIFIStatus(1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//GPS<sp/>Initialization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SERIALGPS.begin(GPS_BAUD,<sp/>SERIAL_8N1);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateDate(0,0,0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateTime(0,0,0);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LCD_UpdateSat(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>lastSTATUS<sp/>=<sp/>millis();<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>loop()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Update<sp/>GPS<sp/>Data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>GPS_DataCollection();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Refresh<sp/>WiFi<sp/>STATUS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>currentMillis<sp/>=<sp/>millis();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>lastSTATUS<sp/>=<sp/>WIFI_RefreshSTATUS(currentMillis,lastSTATUS);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>*************************<sp/>Updates<sp/>ERROR<sp/>Condition</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sysError<sp/>=<sp/>stGPS;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/Teste_SD.ino"/>
+  </compounddef>
+</doxygen>

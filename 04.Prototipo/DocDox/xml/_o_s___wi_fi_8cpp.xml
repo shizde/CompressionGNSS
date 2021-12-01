@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_o_s___wi_fi_8cpp" kind="file" language="C++">
+    <compoundname>OS_WiFi.cpp</compoundname>
+    <includes refid="_op_s_8h" local="yes">OpS.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp</label>
+        <link refid="_o_s___wi_fi_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SPI.h</label>
+      </node>
+      <node id="5">
+        <label>Adafruit_ST7789.h</label>
+      </node>
+      <node id="7">
+        <label>TinyGPS++.h</label>
+      </node>
+      <node id="6">
+        <label>mySD.h</label>
+      </node>
+      <node id="8">
+        <label>ArduinoJson.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_GFX.h</label>
+      </node>
+      <node id="2">
+        <label>OpS.h</label>
+        <link refid="_op_s_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>WiFi.h</label>
+      </node>
+      <node id="9">
+        <label>Vector.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ssid</definition>
+        <argsstring></argsstring>
+        <name>ssid</name>
+        <initializer>= &quot;Redmi 9T&quot;</initializer>
+        <briefdescription>
+<para>SSID Network <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" line="19" column="7" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <initializer>= &quot;chocolate&quot;</initializer>
+        <briefdescription>
+<para>Network Password <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" line="21" column="7" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_o_s___wi_fi_8cpp_1aa578e64be5caeebb44a3e0a26465836a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long WIFI_RefreshSTATUS</definition>
+        <argsstring>(unsigned long c, unsigned long l)</argsstring>
+        <name>WIFI_RefreshSTATUS</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Verify if the WiFi is connected and update status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current time clock </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last updated time clock </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" line="31" column="15" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="31" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>GNSS<sp/>Lossless<sp/>Compression<sp/>Algorithm<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Created:<sp/>7/6/2021<sp/>12:39:59<sp/>PM</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Rafael<sp/>Perez<sp/>&amp;<sp/>Sérgio<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Instituto<sp/>Politécnico<sp/>de<sp/>Portalegre</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_op_s_8h" kindref="compound">OpS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>WiFi<sp/>Definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59" kindref="member">ssid</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Redmi<sp/>9T&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c" kindref="member">password</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;chocolate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="_o_s___wi_fi_8cpp_1aa578e64be5caeebb44a3e0a26465836a" kindref="member">WIFI_RefreshSTATUS</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>l)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>-<sp/>l<sp/>&gt;=<ref refid="_op_s_8h_1a8e5dc897c2040f47c99af43917e9173c" kindref="member">intervalSTATUS</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>WiFi<sp/>with<sp/>2<sp/>minutes<sp/>refresh<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" kindref="member">LCD_UpdateWIFIStatus</ref>(0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" kindref="member">SERIALDEBUG</ref>.println(</highlight><highlight class="stringliteral">&quot;WiFi<sp/>Lost<sp/>connection&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WiFi.begin(<ref refid="_o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59" kindref="member">ssid</ref>,<sp/><ref refid="_o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c" kindref="member">password</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Waits<sp/>for<sp/>a<sp/>new<sp/>connection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(500);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" kindref="member">SERIALDEBUG</ref>.print(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" kindref="member">LCD_UpdateWIFIStatus</ref>(1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" kindref="member">SERIALDEBUG</ref>.println(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" kindref="member">SERIALDEBUG</ref>.println(</highlight><highlight class="stringliteral">&quot;WiFi<sp/>reconnected&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" kindref="member">LCD_UpdateWIFIStatus</ref>(1);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>l;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>l;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp"/>
+  </compounddef>
+</doxygen>

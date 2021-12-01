@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="_b_m_p_8h" kind="file"><name>BMP.h</name>
+    <member refid="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" kind="variable"><name>PROGMEM</name></member>
+  </compound>
+  <compound refid="_op_s_8h" kind="file"><name>OpS.h</name>
+    <member refid="_op_s_8h_1a566dec2de5e81d85ae24115e33a65b39" kind="define"><name>DEBUG_BAUD</name></member>
+    <member refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" kind="define"><name>SERIALDEBUG</name></member>
+    <member refid="_op_s_8h_1a5f4d46ae101b77df78010c506601c87c" kind="define"><name>TFT_CS</name></member>
+    <member refid="_op_s_8h_1a51529307207622c113ff0d584536be13" kind="define"><name>TFT_DC</name></member>
+    <member refid="_op_s_8h_1ab40e9918d9141415a47e2a979292309c" kind="define"><name>TFT_RST</name></member>
+    <member refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kind="define"><name>TFT_WIDTH</name></member>
+    <member refid="_op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434" kind="define"><name>TFT_HEIGHT</name></member>
+    <member refid="_op_s_8h_1aa867b0a73a4f34f297fde887eb0e02d3" kind="define"><name>SD_SS</name></member>
+    <member refid="_op_s_8h_1a8dcea357504f4ef30b778aca40169c36" kind="define"><name>SD_CLK</name></member>
+    <member refid="_op_s_8h_1afb087f7305dc744753834627d3f495d7" kind="define"><name>SD_MISO</name></member>
+    <member refid="_op_s_8h_1a48f4a08c693ab4e9bf6f412a1b385ea8" kind="define"><name>SD_MOSI</name></member>
+    <member refid="_op_s_8h_1adbf75b6d5089d8a5a4749c75e184d026" kind="define"><name>SD_FILE</name></member>
+    <member refid="_op_s_8h_1af0875ffe69dbe45df3f85c1f720c3eee" kind="define"><name>GPS_BAUD</name></member>
+    <member refid="_op_s_8h_1adfce8fce13362d258032e7dcd5792c8d" kind="define"><name>SERIALGPS</name></member>
+    <member refid="_op_s_8h_1ad0c329adebc27917fc0a4f51079acf6a" kind="define"><name>SAMPLES</name></member>
+    <member refid="_op_s_8h_1a08e8d4f4d48da2da0b9a2ae76fb2b0c5" kind="define"><name>stGPS</name></member>
+    <member refid="_op_s_8h_1aa630f6f3e4a8201838096525c715b6c0" kind="define"><name>stGPSDate</name></member>
+    <member refid="_op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce" kind="define"><name>stGPSTime</name></member>
+    <member refid="_op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc" kind="define"><name>stGPSLoc</name></member>
+    <member refid="_op_s_8h_1af086262491848f261960bf0720d4313a" kind="define"><name>stGPSSat</name></member>
+    <member refid="_op_s_8h_1af1805e455fb229bfdfaa628723283af2" kind="define"><name>setSTGPSDate</name></member>
+    <member refid="_op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8" kind="define"><name>resetSTGPSDate</name></member>
+    <member refid="_op_s_8h_1ab99d405ea5eec324c9a773db658b2da1" kind="define"><name>setSTGPSTime</name></member>
+    <member refid="_op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39" kind="define"><name>resetSTGPSTime</name></member>
+    <member refid="_op_s_8h_1aaa12eb6424ef80c7288691472bec4ac2" kind="define"><name>setSTGPSLoc</name></member>
+    <member refid="_op_s_8h_1ae53952d7c3086668ff1f5fb810fae161" kind="define"><name>resetSTGPSLoc</name></member>
+    <member refid="_op_s_8h_1a63b6739c1274e0b3651a4b2a92c23677" kind="define"><name>setSTGPSSat</name></member>
+    <member refid="_op_s_8h_1a49bd522d3fe822fc0b4002bcb73cc803" kind="define"><name>resetSTGPSSat</name></member>
+    <member refid="_op_s_8h_1a8e5dc897c2040f47c99af43917e9173c" kind="define"><name>intervalSTATUS</name></member>
+    <member refid="_op_s_8h_1a626203b4a6bd96fc5af315008b59696a" kind="variable"><name>tft</name></member>
+    <member refid="_op_s_8h_1a0974771b2fba5718eed6eecd656aac59" kind="variable"><name>ssid</name></member>
+    <member refid="_op_s_8h_1a59460a3ff2c12443d1022e5cc0fba85c" kind="variable"><name>password</name></member>
+    <member refid="_op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8" kind="variable"><name>gps</name></member>
+    <member refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kind="variable"><name>sysStatus</name></member>
+    <member refid="_op_s_8h_1af88df719c3754304ec06a339337d06d5" kind="variable"><name>sysError</name></member>
+    <member refid="_op_s_8h_1ae9d001f539ecefd5e2e034a6ad776246" kind="function"><name>LCD_Inic</name></member>
+    <member refid="_op_s_8h_1ae75884f299dfd15220383957da6d9ead" kind="function"><name>LCD_Backgroud</name></member>
+    <member refid="_op_s_8h_1a1e8ba8d5efbab0a29b49d1af99a05e00" kind="function"><name>LCD_UpdateStatus</name></member>
+    <member refid="_op_s_8h_1aee78f42121e7aab95360f5ea7c5901d0" kind="function"><name>LCD_UpdateSamples</name></member>
+    <member refid="_op_s_8h_1a2abd3681d73ac3a7cf4688bccf1de911" kind="function"><name>LCD_UpdateNextTime</name></member>
+    <member refid="_op_s_8h_1a79cddd5241b6bc3e0a252cd6f79dbfc7" kind="function"><name>LCD_UpdateOriSize</name></member>
+    <member refid="_op_s_8h_1ab99c7bad892698d8ea29233589a1fbd6" kind="function"><name>LCD_UpdateCompSize</name></member>
+    <member refid="_op_s_8h_1a82455a245be28dfc68632daa6c234cb0" kind="function"><name>LCD_UpdateDate</name></member>
+    <member refid="_op_s_8h_1a5819307614b440aa72ee8d161039ee5c" kind="function"><name>LCD_UpdateTime</name></member>
+    <member refid="_op_s_8h_1a87da9f9d16ec376891d625d07458aa20" kind="function"><name>LCD_UpdateSat</name></member>
+    <member refid="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" kind="function"><name>LCD_UpdateWIFIStatus</name></member>
+    <member refid="_op_s_8h_1ab4f2c014e134b5830124e6688f66bea8" kind="function"><name>LCD_UpdateSDStatus</name></member>
+    <member refid="_op_s_8h_1aee327fd10efe55f51daaf3a5be1cd84d" kind="function"><name>LCD_UpdateGPSStatus</name></member>
+    <member refid="_op_s_8h_1aa578e64be5caeebb44a3e0a26465836a" kind="function"><name>WIFI_RefreshSTATUS</name></member>
+    <member refid="_op_s_8h_1a4904ab58331456a7675fdf6fb95fc975" kind="function"><name>GPS_DataCollection</name></member>
+  </compound>
+  <compound refid="_o_s___g_p_s_8cpp" kind="file"><name>OS_GPS.cpp</name>
+    <member refid="_o_s___g_p_s_8cpp_1a4904ab58331456a7675fdf6fb95fc975" kind="function"><name>GPS_DataCollection</name></member>
+  </compound>
+  <compound refid="_o_s___l_c_d_8cpp" kind="file"><name>OS_LCD.cpp</name>
+    <member refid="_o_s___l_c_d_8cpp_1a626203b4a6bd96fc5af315008b59696a" kind="variable"><name>tft</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kind="function"><name>LCD_TextBox</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1aa464db67221a3c67ac4e9585a27333b8" kind="function"><name>LCD_GraphBox</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" kind="function"><name>LCD_Text</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1ae9d001f539ecefd5e2e034a6ad776246" kind="function"><name>LCD_Inic</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1af91fa121c240a97da5ed1c0135c16007" kind="function"><name>LCD_Cross</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1ae75884f299dfd15220383957da6d9ead" kind="function"><name>LCD_Backgroud</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1aee327fd10efe55f51daaf3a5be1cd84d" kind="function"><name>LCD_UpdateGPSStatus</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1ab4f2c014e134b5830124e6688f66bea8" kind="function"><name>LCD_UpdateSDStatus</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1aa5fe323b16d95b54985b08cf06d5e4ef" kind="function"><name>LCD_UpdateWIFIStatus</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a87da9f9d16ec376891d625d07458aa20" kind="function"><name>LCD_UpdateSat</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1af074aff9e93a240e1a6170c71dad79ff" kind="function"><name>LCD_UpdateSamples</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a60194d4829deb96ff00f185d8b0a8180" kind="function"><name>LCD_UpdateNextTime</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a24d375f8648a2d2e14d5144d8cd9e3dc" kind="function"><name>LCD_UpdateOriSize</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1aebdccd95357f44461cfacc9de767b62e" kind="function"><name>LCD_UpdateCompSize</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a63e97f0d73463fe4cf183858385bda2a" kind="function"><name>LCD_UpdateStatus</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1a5923a0da47fbebbdce5fca68fe112c56" kind="function"><name>LCD_UpdateDate</name></member>
+    <member refid="_o_s___l_c_d_8cpp_1aef508816917ae0500f92c04c9d044290" kind="function"><name>LCD_UpdateTime</name></member>
+  </compound>
+  <compound refid="_o_s___wi_fi_8cpp" kind="file"><name>OS_WiFi.cpp</name>
+    <member refid="_o_s___wi_fi_8cpp_1a0974771b2fba5718eed6eecd656aac59" kind="variable"><name>ssid</name></member>
+    <member refid="_o_s___wi_fi_8cpp_1a59460a3ff2c12443d1022e5cc0fba85c" kind="variable"><name>password</name></member>
+    <member refid="_o_s___wi_fi_8cpp_1aa578e64be5caeebb44a3e0a26465836a" kind="function"><name>WIFI_RefreshSTATUS</name></member>
+  </compound>
+  <compound refid="_teste___s_d_8ino" kind="file"><name>Teste_SD.ino</name>
+  </compound>
+  <compound refid="dir_5bbe11e75f8448b266e1564fd2d05b95" kind="dir"><name>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste</name>
+  </compound>
+  <compound refid="dir_929a0b064a845ba5c991510532187c57" kind="dir"><name>C:/Users/rafam/OneDrive/Documentos/90 - Teste</name>
+  </compound>
+  <compound refid="dir_f1c991283d0eb883f32dcd5c333211d6" kind="dir"><name>C:/Users/rafam/OneDrive/Documentos</name>
+  </compound>
+  <compound refid="dir_81219d58851f5db9383c681eb3fd3ee0" kind="dir"><name>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD</name>
+  </compound>
+</doxygenindex>

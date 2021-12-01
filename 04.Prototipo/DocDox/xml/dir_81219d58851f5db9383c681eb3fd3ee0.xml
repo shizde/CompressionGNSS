@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_81219d58851f5db9383c681eb3fd3ee0" kind="dir">
+    <compoundname>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD</compoundname>
+    <innerfile refid="_b_m_p_8h">BMP.h</innerfile>
+    <innerfile refid="_op_s_8h">OpS.h</innerfile>
+    <innerfile refid="_o_s___g_p_s_8cpp">OS_GPS.cpp</innerfile>
+    <innerfile refid="_o_s___l_c_d_8cpp">OS_LCD.cpp</innerfile>
+    <innerfile refid="_o_s___wi_fi_8cpp">OS_WiFi.cpp</innerfile>
+    <innerfile refid="_teste___s_d_8ino">Teste_SD.ino</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/"/>
+  </compounddef>
+</doxygen>

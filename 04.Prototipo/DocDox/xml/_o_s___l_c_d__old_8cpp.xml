@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_o_s___l_c_d__old_8cpp" kind="file" language="C++">
+    <compoundname>OS_LCD_old.cpp</compoundname>
+    <includes refid="_op_s_8h" local="yes">OpS.h</includes>
+    <includes refid="_b_m_p_8h" local="yes">BMP.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>SPI.h</label>
+      </node>
+      <node id="11">
+        <label>BMP.h</label>
+        <link refid="_b_m_p_8h"/>
+      </node>
+      <node id="5">
+        <label>Adafruit_ST7789.h</label>
+      </node>
+      <node id="7">
+        <label>TinyGPS++.h</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp</label>
+        <link refid="_o_s___l_c_d__old_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mySD.h</label>
+      </node>
+      <node id="8">
+        <label>ArduinoJson.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_GFX.h</label>
+      </node>
+      <node id="2">
+        <label>OpS.h</label>
+        <link refid="_op_s_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>WiFi.h</label>
+      </node>
+      <node id="9">
+        <label>Vector.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" prot="public" static="no" mutable="no">
+        <type>Adafruit_ST7789</type>
+        <definition>Adafruit_ST7789 tft</definition>
+        <argsstring></argsstring>
+        <name>tft</name>
+        <initializer>= Adafruit_ST7789(<ref refid="_op_s_8h_1a5f4d46ae101b77df78010c506601c87c" kindref="member">TFT_CS</ref>, <ref refid="_op_s_8h_1a51529307207622c113ff0d584536be13" kindref="member">TFT_DC</ref>, <ref refid="_op_s_8h_1ab40e9918d9141415a47e2a979292309c" kindref="member">TFT_RST</ref>)</initializer>
+        <briefdescription>
+<para>TFT variable initialization <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="11" column="17" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_TextBox</definition>
+        <argsstring>(int X, int Y, int W, int H, int V, char *L, char B)</argsstring>
+        <name>LCD_TextBox</name>
+        <param>
+          <type>int</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>H</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="17" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="17" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_GraphBox</definition>
+        <argsstring>(int X, int Y, int W, int H, int S)</argsstring>
+        <name>LCD_GraphBox</name>
+        <param>
+          <type>int</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>W</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>H</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="38" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="38" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_Text</definition>
+        <argsstring>(int X, int Y, char *T)</argsstring>
+        <name>LCD_Text</name>
+        <param>
+          <type>int</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="69" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1ae9d001f539ecefd5e2e034a6ad776246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_Inic</definition>
+        <argsstring>(void)</argsstring>
+        <name>LCD_Inic</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LCD Initialization <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="81" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1ae75884f299dfd15220383957da6d9ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_Backgroud</definition>
+        <argsstring>(void)</argsstring>
+        <name>LCD_Backgroud</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiable Display Background <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="89" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="89" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a3171d245994523f6fde19bd987c076eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateSamples</definition>
+        <argsstring>(int V)</argsstring>
+        <name>UpdateSamples</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="110" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1afe5edfffdfa43a46f9a0ad320c5530c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateNextTime</definition>
+        <argsstring>(int V)</argsstring>
+        <name>UpdateNextTime</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="114" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a97e7bc87826e05c1777fcc001d4161d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateOriSize</definition>
+        <argsstring>(int V)</argsstring>
+        <name>UpdateOriSize</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="118" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a7e8480f37dd93b892acd332df02f17da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateCompSize</definition>
+        <argsstring>(int V)</argsstring>
+        <name>UpdateCompSize</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="122" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a6de1bb0f0b3d60e344eec8423a363333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateStatus</definition>
+        <argsstring>(int S)</argsstring>
+        <name>UpdateStatus</name>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="126" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a5dc89d5e48e7670f231aea95fa0cb1cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateDate</definition>
+        <argsstring>(uint16_t y, uint8_t m, uint8_t d)</argsstring>
+        <name>UpdateDate</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="130" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1a6ae54514ff4f83746682da800ae4f6b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateTime</definition>
+        <argsstring>(uint8_t h, uint8_t m, uint8_t s)</argsstring>
+        <name>UpdateTime</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="137" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="137" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="_o_s___l_c_d__old_8cpp_1aabced063fbcba43eff6e132820af67e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateSat</definition>
+        <argsstring>(uint8_t s)</argsstring>
+        <name>UpdateSat</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" line="144" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp" bodystart="144" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_op_s_8h" kindref="compound">OpS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_b_m_p_8h" kindref="compound">BMP.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GLOBAL<sp/>Variable<sp/>Definition<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">Adafruit_ST7789<sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref><sp/>=<sp/>Adafruit_ST7789(<ref refid="_op_s_8h_1a5f4d46ae101b77df78010c506601c87c" kindref="member">TFT_CS</ref>,<sp/><ref refid="_op_s_8h_1a51529307207622c113ff0d584536be13" kindref="member">TFT_DC</ref>,<sp/><ref refid="_op_s_8h_1ab40e9918d9141415a47e2a979292309c" kindref="member">TFT_RST</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Private<sp/>Functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>W,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>H,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>V,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>L,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>B){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(B==1)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Outline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawRect(X,Y,W,H,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextColor(ST77XX_WHITE);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.fillRect(X,Y,W,10,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextSize(1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setCursor(X+5,Y);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.print(L);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextColor(ST77XX_WHITE,ST77XX_BLACK);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setCursor(X+45,Y+15);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextSize(4);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.print(V);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8" kindref="member">LCD_GraphBox</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Y,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>W,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>H,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>S){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*txt;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>bC;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>tC;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dx;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Outline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawRect(X,Y,W,H,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawRect(X+1,Y+1,W-2,H-2,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(S==1)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ON&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bC<sp/>=<sp/>ST77XX_GREEN;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tC<sp/>=<sp/>ST77XX_BLACK;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dx<sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;OFF&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bC<sp/>=<sp/>ST77XX_RED;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tC<sp/>=<sp/>ST77XX_WHITE;<sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dx<sp/>=<sp/>18;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextSize(4);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextColor(tC);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.fillRect(X+2,Y+2,W-4,H-4,bC);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setCursor(X+dx,Y+10);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.print(txt);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" kindref="member">LCD_Text</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Y,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>T){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setCursor(X,Y);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextSize(2);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextColor(ST77XX_WHITE,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.print(T);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Public<sp/>Functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>LCD<sp/>Initialization<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1ae9d001f539ecefd5e2e034a6ad776246" kindref="member">LCD_Inic</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.init(<ref refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kindref="member">TFT_WIDTH</ref>,<ref refid="_op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434" kindref="member">TFT_HEIGHT</ref>,SPI_MODE2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setRotation(2);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.fillScreen(ST77XX_BLACK);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextColor(ST77XX_WHITE);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextWrap(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1ae75884f299dfd15220383957da6d9ead" kindref="member">LCD_Backgroud</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.fillRect(0,0,<ref refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kindref="member">TFT_WIDTH</ref>,25,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setCursor(40,5);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.setTextSize(2);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.print(</highlight><highlight class="stringliteral">&quot;IoT<sp/>Test<sp/>Node&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delimiters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawFastHLine(0,<sp/>85,<ref refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kindref="member">TFT_WIDTH</ref>,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawFastHLine(0,145,<ref refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kindref="member">TFT_WIDTH</ref>,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Footer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.fillRect(0,215,<ref refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" kindref="member">TFT_WIDTH</ref>,25,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>Boxes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(125,90,100,50,<sp/>10,</highlight><highlight class="stringliteral">&quot;Samples&quot;</highlight><highlight class="normal">,1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>Samples</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(<sp/>15,90,100,50,<sp/>10,</highlight><highlight class="stringliteral">&quot;Next<sp/>Sample&quot;</highlight><highlight class="normal">,1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>to<sp/>next<sp/>sample</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(125,150,100,50,10,</highlight><highlight class="stringliteral">&quot;Compressed<sp/>Size&quot;</highlight><highlight class="normal">,1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Original<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(<sp/>15,150,100,50,10,</highlight><highlight class="stringliteral">&quot;Original<sp/>Size&quot;</highlight><highlight class="normal">,1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compressed<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Images</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawBitmap(150,30,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_BLUE);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>.drawBitmap(185,30,BMP_cloud,32,32,ST77XX_BLACK,ST77XX_WHITE);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a3171d245994523f6fde19bd987c076eb" kindref="member">UpdateSamples</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>V){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(125,90,100,50,<sp/>V,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1afe5edfffdfa43a46f9a0ad320c5530c8" kindref="member">UpdateNextTime</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>V){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(<sp/>15,90,100,50,<sp/>V,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a97e7bc87826e05c1777fcc001d4161d4" kindref="member">UpdateOriSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>V){</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(<sp/>15,150,100,50,V,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a7e8480f37dd93b892acd332df02f17da" kindref="member">UpdateCompSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>V){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a337b856c3a94cfe7f6023adaa014979f" kindref="member">LCD_TextBox</ref>(125,150,100,50,V,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a6de1bb0f0b3d60e344eec8423a363333" kindref="member">UpdateStatus</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>S){</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1aa464db67221a3c67ac4e9585a27333b8" kindref="member">LCD_GraphBox</ref>(15,30,100,50,<sp/>S);<sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a5dc89d5e48e7670f231aea95fa0cb1cd" kindref="member">UpdateDate</ref>(uint16_t<sp/>y,<sp/>uint8_t<sp/>m,<sp/>uint8_t<sp/>d){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data[16]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(data,</highlight><highlight class="stringliteral">&quot;%d/%d/%d&quot;</highlight><highlight class="normal">,y,m,d);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" kindref="member">LCD_Text</ref>(5,<sp/>220,<sp/>data);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1a6ae54514ff4f83746682da800ae4f6b1" kindref="member">UpdateTime</ref>(uint8_t<sp/>h,<sp/>uint8_t<sp/>m,<sp/>uint8_t<sp/>s){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hora[16]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(hora,</highlight><highlight class="stringliteral">&quot;%d:%d:%d&quot;</highlight><highlight class="normal">,h,m,s);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" kindref="member">LCD_Text</ref>(140,<sp/>220,<sp/>hora);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___l_c_d__old_8cpp_1aabced063fbcba43eff6e132820af67e5" kindref="member">UpdateSat</ref>(uint8_t<sp/>s){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sat[3];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(sat,</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,s);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s___l_c_d__old_8cpp_1af6eed18d703cce3d5c56c04e6fb6bf5d" kindref="member">LCD_Text</ref>(125,<sp/>50,<sp/>sat);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD_old.cpp"/>
+  </compounddef>
+</doxygen>

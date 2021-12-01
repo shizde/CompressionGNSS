@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_b_m_p_8h" kind="file" language="C++">
+    <compoundname>BMP.h</compoundname>
+    <includedby refid="_o_s___l_c_d_8cpp" local="yes">C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/BMP.h</label>
+        <link refid="_b_m_p_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp</label>
+        <link refid="_o_s___l_c_d_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" prot="public" static="no" mutable="no">
+        <type>const unsigned char BMP_sd[]</type>
+        <definition>const unsigned char BMP_cloud [] PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <initializer>= {
+	0xf0, 0x00, 0x0f, 0xff, 0xf0, 0x00, 0x07, 0xff, 0xf0, 0x00, 0x03, 0xff, 0xf0, 0x00, 0x01, 0xff,
+	0xf0, 0x00, 0x00, 0xff, 0xf0, 0xe7, 0x38, 0x7f, 0xf0, 0xe7, 0x38, 0x3f, 0xf0, 0xe7, 0x38, 0x1f,
+	0xf0, 0xe7, 0x38, 0x0f, 0xf0, 0xe7, 0x38, 0x0f, 0xf0, 0xe7, 0x38, 0x0f, 0xf0, 0xe7, 0x38, 0x0f,
+	0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f,
+	0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f,
+	0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f,
+	0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f,
+	0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f, 0xf0, 0x00, 0x00, 0x0f
+}</initializer>
+        <briefdescription>
+<para>BMP image for SD Card <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para>BMP image for GPS <linebreak/>
+</para>
+<para>BMP image for WiFi <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/BMP.h" line="18" column="29" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/BMP.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>GNSS<sp/>Lossless<sp/>Compression<sp/>Algorithm<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Created:<sp/>7/6/2021<sp/>12:39:59<sp/>PM</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Rafael<sp/>Perez<sp/>&amp;<sp/>Sérgio<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Instituto<sp/>Politécnico<sp/>de<sp/>Portalegre</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BMP_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMP_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&apos;sd-card_32_mono&apos;,<sp/>32x32px</highlight></codeline>
+<codeline lineno="18" refid="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" refkind="member"><highlight class="comment"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>BMP_sd<sp/>[]<sp/><ref refid="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" kindref="member">PROGMEM</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x0f,<sp/>0xff,<sp/>0xf0,<sp/>0x00,<sp/>0x07,<sp/>0xff,<sp/>0xf0,<sp/>0x00,<sp/>0x03,<sp/>0xff,<sp/>0xf0,<sp/>0x00,<sp/>0x01,<sp/>0xff,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0xff,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x7f,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x3f,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x1f,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x0f,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x0f,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x0f,<sp/>0xf0,<sp/>0xe7,<sp/>0x38,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&apos;gps_32_mono&apos;,<sp/>32x32px</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>BMP_gps<sp/>[]<sp/><ref refid="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" kindref="member">PROGMEM</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0xf0,<sp/>0x0f,<sp/>0xff,<sp/>0xff,<sp/>0xc0,<sp/>0x03,<sp/>0xff,<sp/>0xff,<sp/>0x00,<sp/>0x00,<sp/>0xff,<sp/>0xfe,<sp/>0x00,<sp/>0x00,<sp/>0x7f,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>0xfc,<sp/>0x00,<sp/>0x00,<sp/>0x3f,<sp/>0xfc,<sp/>0x00,<sp/>0x00,<sp/>0x3f,<sp/>0xf8,<sp/>0x00,<sp/>0x00,<sp/>0x1f,<sp/>0xf8,<sp/>0x03,<sp/>0xc0,<sp/>0x1f,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x07,<sp/>0xe0,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf0,<sp/>0x1f,<sp/>0xf8,<sp/>0x0f,<sp/>0xf0,<sp/>0x1f,<sp/>0xf8,<sp/>0x0f,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x1f,<sp/>0xf8,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf0,<sp/>0x0f,<sp/>0xf8,<sp/>0x07,<sp/>0xe0,<sp/>0x1f,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf8,<sp/>0x01,<sp/>0x80,<sp/>0x1f,<sp/>0xf8,<sp/>0x00,<sp/>0x00,<sp/>0x1f,<sp/>0xfc,<sp/>0x00,<sp/>0x00,<sp/>0x3f,<sp/>0xfc,<sp/>0x00,<sp/>0x00,<sp/>0x3f,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>0xfe,<sp/>0x00,<sp/>0x00,<sp/>0x7f,<sp/>0xfe,<sp/>0x00,<sp/>0x00,<sp/>0x7f,<sp/>0xff,<sp/>0x00,<sp/>0x00,<sp/>0xff,<sp/>0xff,<sp/>0x00,<sp/>0x00,<sp/>0xff,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0x80,<sp/>0x01,<sp/>0xff,<sp/>0xff,<sp/>0xc0,<sp/>0x03,<sp/>0xff,<sp/>0xff,<sp/>0xc0,<sp/>0x03,<sp/>0xff,<sp/>0xff,<sp/>0xe0,<sp/>0x07,<sp/>0xff,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0xf0,<sp/>0x0f,<sp/>0xff,<sp/>0xff,<sp/>0xf8,<sp/>0x1f,<sp/>0xff,<sp/>0xff,<sp/>0xf8,<sp/>0x1f,<sp/>0xff,<sp/>0xff,<sp/>0xfc,<sp/>0x3f,<sp/>0xff</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&apos;cloud_32_mono&apos;,<sp/>32x32px</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>BMP_cloud<sp/>[]<sp/><ref refid="_b_m_p_8h_1af8f691cc5d91c137d97e9efd40202ca1" kindref="member">PROGMEM</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xfe,<sp/>0x07,<sp/>0xff,<sp/>0xff,<sp/>0xf8,<sp/>0x01,<sp/>0xff,<sp/>0xff,<sp/>0xf0,<sp/>0x00,<sp/>0xff,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>0xfe,<sp/>0x20,<sp/>0x00,<sp/>0x7f,<sp/>0xf8,<sp/>0x00,<sp/>0x00,<sp/>0x3f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x1f,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x1f,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x1f,<sp/>0xe0,<sp/>0x00,<sp/>0x00,<sp/>0x1f,<sp/>0xc0,<sp/>0x00,<sp/>0x00,<sp/>0x07,<sp/>0x80,<sp/>0x00,<sp/>0x00,<sp/>0x03,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>0x80,<sp/>0x00,<sp/>0x00,<sp/>0x01,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x80,<sp/>0x00,<sp/>0x00,<sp/>0x01,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>0x80,<sp/>0x00,<sp/>0x00,<sp/>0x01,<sp/>0xc0,<sp/>0x00,<sp/>0x00,<sp/>0x03,<sp/>0xf0,<sp/>0x00,<sp/>0x00,<sp/>0x0f,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff,<sp/>0xff</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BMP_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/BMP.h"/>
+  </compounddef>
+</doxygen>

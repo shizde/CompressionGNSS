@@ -1,0 +1,1090 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_op_s_8h" kind="file" language="C++">
+    <compoundname>OpS.h</compoundname>
+    <includes local="no">SPI.h</includes>
+    <includes local="no">Adafruit_GFX.h</includes>
+    <includes local="no">Adafruit_ST7789.h</includes>
+    <includes local="no">mySD.h</includes>
+    <includes local="no">TinyGPS++.h</includes>
+    <includes local="no">ArduinoJson.h</includes>
+    <includes local="no">Vector.h</includes>
+    <includes local="no">WiFi.h</includes>
+    <includedby refid="_o_s___g_p_s_8cpp" local="yes">C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_GPS.cpp</includedby>
+    <includedby refid="_o_s___l_c_d_8cpp" local="yes">C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp</includedby>
+    <includedby refid="_o_s___wi_fi_8cpp" local="yes">C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>SPI.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_ST7789.h</label>
+      </node>
+      <node id="6">
+        <label>TinyGPS++.h</label>
+      </node>
+      <node id="5">
+        <label>mySD.h</label>
+      </node>
+      <node id="7">
+        <label>ArduinoJson.h</label>
+      </node>
+      <node id="3">
+        <label>Adafruit_GFX.h</label>
+      </node>
+      <node id="1">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h</label>
+        <link refid="_op_s_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>WiFi.h</label>
+      </node>
+      <node id="8">
+        <label>Vector.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp</label>
+        <link refid="_o_s___wi_fi_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_GPS.cpp</label>
+        <link refid="_o_s___g_p_s_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h</label>
+        <link refid="_op_s_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp</label>
+        <link refid="_o_s___l_c_d_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_op_s_8h_1a566dec2de5e81d85ae24115e33a65b39" prot="public" static="no">
+        <name>DEBUG_BAUD</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+<para>The baud rate for Serial Monitor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="38" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" prot="public" static="no">
+        <name>SERIALDEBUG</name>
+        <initializer>Serial</initializer>
+        <briefdescription>
+<para>Specify the serial port in use for Serial Monitor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="39" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a5f4d46ae101b77df78010c506601c87c" prot="public" static="no">
+        <name>TFT_CS</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+<para>Chip Selector for TFT Module. As it is not necessary, setted as <emphasis>-1</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="61" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a51529307207622c113ff0d584536be13" prot="public" static="no">
+        <name>TFT_DC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Data/Command pin for TFT Module. Pin used: <emphasis>2</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="62" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1ab40e9918d9141415a47e2a979292309c" prot="public" static="no">
+        <name>TFT_RST</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>Reset pin for TFT Module. Pin used: <emphasis>4</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="63" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" prot="public" static="no">
+        <name>TFT_WIDTH</name>
+        <initializer>240</initializer>
+        <briefdescription>
+<para>Value for TFT screen width. Value: <emphasis>240</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="64" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434" prot="public" static="no">
+        <name>TFT_HEIGHT</name>
+        <initializer>240</initializer>
+        <briefdescription>
+<para>Value for TFT screen height. Value: <emphasis>240</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="65" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1aa867b0a73a4f34f297fde887eb0e02d3" prot="public" static="no">
+        <name>SD_SS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>Slave Select pin used for SD Card. Pin used: <emphasis>5</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="85" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a8dcea357504f4ef30b778aca40169c36" prot="public" static="no">
+        <name>SD_CLK</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para>Clock pin for SD Card. Pin used: <emphasis>21</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="86" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1afb087f7305dc744753834627d3f495d7" prot="public" static="no">
+        <name>SD_MISO</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para>Master Input/Slave Output pin for SD Card. Pin used: <emphasis>19</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="87" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a48f4a08c693ab4e9bf6f412a1b385ea8" prot="public" static="no">
+        <name>SD_MOSI</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para>Master Output /Slave Input pin for SD Card. Pin used: <emphasis>22</emphasis> . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="88" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1adbf75b6d5089d8a5a4749c75e184d026" prot="public" static="no">
+        <name>SD_FILE</name>
+        <initializer>&quot;/InitTest.txt&quot;</initializer>
+        <briefdescription>
+<para>Name of SD Card file for storing data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="89" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1af0875ffe69dbe45df3f85c1f720c3eee" prot="public" static="no">
+        <name>GPS_BAUD</name>
+        <initializer>9600</initializer>
+        <briefdescription>
+<para>Baud rate used for GPS Serial. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="103" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1adfce8fce13362d258032e7dcd5792c8d" prot="public" static="no">
+        <name>SERIALGPS</name>
+        <initializer>Serial2</initializer>
+        <briefdescription>
+<para>Serial in use for GPS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="104" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1ad0c329adebc27917fc0a4f51079acf6a" prot="public" static="no">
+        <name>SAMPLES</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para>Max of samples accepted per file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="105" column="10" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a08e8d4f4d48da2da0b9a2ae76fb2b0c5" prot="public" static="no">
+        <name>stGPS</name>
+        <initializer>(<ref refid="_op_s_8h_1aa630f6f3e4a8201838096525c715b6c0" kindref="member">stGPSDate</ref> | <ref refid="_op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce" kindref="member">stGPSTime</ref> | <ref refid="_op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc" kindref="member">stGPSLoc</ref> | <ref refid="_op_s_8h_1af086262491848f261960bf0720d4313a" kindref="member">stGPSSat</ref>)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="164" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1aa630f6f3e4a8201838096525c715b6c0" prot="public" static="no">
+        <name>stGPSDate</name>
+        <initializer>((<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; 0b0000000000000001) &gt;&gt; 0)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="165" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce" prot="public" static="no">
+        <name>stGPSTime</name>
+        <initializer>((<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; 0b0000000000000010) &gt;&gt; 1)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="166" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc" prot="public" static="no">
+        <name>stGPSLoc</name>
+        <initializer>((<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; 0b0000000000000100) &gt;&gt; 2)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="167" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1af086262491848f261960bf0720d4313a" prot="public" static="no">
+        <name>stGPSSat</name>
+        <initializer>((<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; 0b0000000000001000) &gt;&gt; 3)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="168" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1af1805e455fb229bfdfaa628723283af2" prot="public" static="no">
+        <name>setSTGPSDate</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> |  0b0000000000000001)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="169" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8" prot="public" static="no">
+        <name>resetSTGPSDate</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; ~0b0000000000000001)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="170" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1ab99d405ea5eec324c9a773db658b2da1" prot="public" static="no">
+        <name>setSTGPSTime</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> |  0b0000000000000010)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="171" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39" prot="public" static="no">
+        <name>resetSTGPSTime</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; ~0b0000000000000010)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="172" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1aaa12eb6424ef80c7288691472bec4ac2" prot="public" static="no">
+        <name>setSTGPSLoc</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> |  0b0000000000000100)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="173" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1ae53952d7c3086668ff1f5fb810fae161" prot="public" static="no">
+        <name>resetSTGPSLoc</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; ~0b0000000000000100)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="174" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a63b6739c1274e0b3651a4b2a92c23677" prot="public" static="no">
+        <name>setSTGPSSat</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> |  0b0000000000001000)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="175" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a49bd522d3fe822fc0b4002bcb73cc803" prot="public" static="no">
+        <name>resetSTGPSSat</name>
+        <initializer>(<ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref> &amp; ~0b0000000000001000)</initializer>
+        <briefdescription>
+<para>Error status word. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="176" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_op_s_8h_1a8e5dc897c2040f47c99af43917e9173c" prot="public" static="no">
+        <name>intervalSTATUS</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+<para>Time interval between connections. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="177" column="9" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_op_s_8h_1a626203b4a6bd96fc5af315008b59696a" prot="public" static="no" mutable="no">
+        <type>Adafruit_ST7789</type>
+        <definition>Adafruit_ST7789 tft</definition>
+        <argsstring></argsstring>
+        <name>tft</name>
+        <briefdescription>
+<para>TFT variable initialization <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="110" column="24" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="19" bodyend="-1" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="110" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="_op_s_8h_1a0974771b2fba5718eed6eecd656aac59" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ssid</definition>
+        <argsstring></argsstring>
+        <name>ssid</name>
+        <briefdescription>
+<para>SSID Network <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="111" column="13" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="19" bodyend="-1" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="111" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="_op_s_8h_1a59460a3ff2c12443d1022e5cc0fba85c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+<para>Network Password <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="112" column="13" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="21" bodyend="-1" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="112" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="_op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8" prot="public" static="no" mutable="no">
+        <type>TinyGPSPlus</type>
+        <definition>TinyGPSPlus gps</definition>
+        <argsstring></argsstring>
+        <name>gps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="113" column="20" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="113" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t sysStatus</definition>
+        <argsstring></argsstring>
+        <name>sysStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="114" column="17" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="114" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="_op_s_8h_1af88df719c3754304ec06a339337d06d5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sysError</definition>
+        <argsstring></argsstring>
+        <name>sysError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="115" column="16" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="115" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_op_s_8h_1ae9d001f539ecefd5e2e034a6ad776246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_Inic</definition>
+        <argsstring>(void)</argsstring>
+        <name>LCD_Inic</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="185" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="120" bodyend="127" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="185" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1ae75884f299dfd15220383957da6d9ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_Backgroud</definition>
+        <argsstring>(void)</argsstring>
+        <name>LCD_Backgroud</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Draw the screen background. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="189" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="157" bodyend="180" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="189" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a1e8ba8d5efbab0a29b49d1af99a05e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateStatus</definition>
+        <argsstring>(int)</argsstring>
+        <name>LCD_UpdateStatus</name>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Update Graphbox that shows if the system is storing data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit in order to set the Graph Box STATUS - ON/OFF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="190" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="284" bodyend="287" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="190" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1aee78f42121e7aab95360f5ea7c5901d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateSamples</definition>
+        <argsstring>(int)</argsstring>
+        <name>LCD_UpdateSamples</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+<para>Update Number of Samples receveid by GPS sensor and stored. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of samples stored in current process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="191" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="244" bodyend="247" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="191" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a2abd3681d73ac3a7cf4688bccf1de911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateNextTime</definition>
+        <argsstring>(int)</argsstring>
+        <name>LCD_UpdateNextTime</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+<para>Update timer to receive a new sample and analyze it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time to next sample </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="192" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="254" bodyend="257" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="192" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a79cddd5241b6bc3e0a252cd6f79dbfc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateOriSize</definition>
+        <argsstring>(int)</argsstring>
+        <name>LCD_UpdateOriSize</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+<para>Update and display the size of original trajectory file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original Data File Size (MBs) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="193" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="264" bodyend="267" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="193" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1ab99c7bad892698d8ea29233589a1fbd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateCompSize</definition>
+        <argsstring>(int)</argsstring>
+        <name>LCD_UpdateCompSize</name>
+        <param>
+          <type>int</type>
+          <declname>V</declname>
+        </param>
+        <briefdescription>
+<para>Update and display the size of compressed trajectory file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Compressed Data File Size (MBs) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="194" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="274" bodyend="277" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="194" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a82455a245be28dfc68632daa6c234cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateDate</definition>
+        <argsstring>(uint16_t, uint8_t, uint8_t)</argsstring>
+        <name>LCD_UpdateDate</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Update date information received from satellites. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current year data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current month data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current day data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="195" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="296" bodyend="314" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="195" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a5819307614b440aa72ee8d161039ee5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateTime</definition>
+        <argsstring>(uint8_t, uint8_t, uint8_t)</argsstring>
+        <name>LCD_UpdateTime</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Update time information received from satellites. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current hour data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current minute data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current second data received from GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="196" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="323" bodyend="339" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="196" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a87da9f9d16ec376891d625d07458aa20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateSat</definition>
+        <argsstring>(uint8_t s)</argsstring>
+        <name>LCD_UpdateSat</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Update Number of Satellites that sends data to the GPS Sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of satellites reached by the GPS sensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="197" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="230" bodyend="236" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="197" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateWIFIStatus</definition>
+        <argsstring>(uint8_t s)</argsstring>
+        <name>LCD_UpdateWIFIStatus</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Validate WIFI Status - Validate WiFi connection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="198" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="216" bodyend="223" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="198" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1ab4f2c014e134b5830124e6688f66bea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateSDStatus</definition>
+        <argsstring>(uint8_t s)</argsstring>
+        <name>LCD_UpdateSDStatus</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Update SD Card Status - Validate SD Card functioning. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="199" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="202" bodyend="209" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="199" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1aee327fd10efe55f51daaf3a5be1cd84d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCD_UpdateGPSStatus</definition>
+        <argsstring>(uint8_t s)</argsstring>
+        <name>LCD_UpdateGPSStatus</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Update GPS Status - Validate received gps data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit in order to print cross to indicate NOT STATUS </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="200" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_LCD.cpp" bodystart="187" bodyend="195" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="200" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1aa578e64be5caeebb44a3e0a26465836a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long WIFI_RefreshSTATUS</definition>
+        <argsstring>(unsigned long c, unsigned long l)</argsstring>
+        <name>WIFI_RefreshSTATUS</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Verify if the WiFi is connected and update status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current time clock </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Last updated time clock </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="208" column="15" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_WiFi.cpp" bodystart="31" bodyend="57" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="208" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_op_s_8h_1a4904ab58331456a7675fdf6fb95fc975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GPS_DataCollection</definition>
+        <argsstring>(void)</argsstring>
+        <name>GPS_DataCollection</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Receive GPs data and process it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" line="214" column="6" bodyfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OS_GPS.cpp" bodystart="18" bodyend="66" declfile="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h" declline="214" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>GNSS<sp/>Lossless<sp/>Compression<sp/>Algorithm<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Created:<sp/>7/6/2021<sp/>12:39:59<sp/>PM</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Rafael<sp/>Perez<sp/>&amp;<sp/>Sérgio<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Instituto<sp/>Politécnico<sp/>de<sp/>Portalegre</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>External<sp/>Libraries<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_GFX.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Core<sp/>graphics<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_ST7789.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hardware-specific<sp/>library<sp/>for<sp/>ST7789</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mySD.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SD<sp/>Card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TinyGPS++.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GPS<sp/>NEO-7M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ArduinoJson.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ArduinoJson</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Vector.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WiFi.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>WiFi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DEBUG<sp/>Definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_op_s_8h_1a566dec2de5e81d85ae24115e33a65b39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>DEBUG_BAUD<sp/><sp/>115200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_op_s_8h_1a60ba565131d290d6ebd1eda08c43432a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SERIALDEBUG<sp/>Serial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TFT<sp/>Definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_op_s_8h_1a5f4d46ae101b77df78010c506601c87c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TFT_CS<sp/><sp/><sp/><sp/><sp/><sp/>-1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>chip<sp/>select<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_op_s_8h_1a51529307207622c113ff0d584536be13" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TFT_DC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>data/command<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_op_s_8h_1ab40e9918d9141415a47e2a979292309c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TFT_RST<sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>reset<sp/>pin,<sp/>or<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_op_s_8h_1a83af0cb652728913ff58da7133c692ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TFT_WIDTH<sp/><sp/><sp/>240</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_op_s_8h_1a1c2d2e1cd167f90b809c3450fd6f3434" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TFT_HEIGHT<sp/><sp/>240</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>SD<sp/>Card<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_op_s_8h_1aa867b0a73a4f34f297fde887eb0e02d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SD_SS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="_op_s_8h_1a8dcea357504f4ef30b778aca40169c36" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SD_CLK<sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="comment">//18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="_op_s_8h_1afb087f7305dc744753834627d3f495d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SD_MISO<sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_op_s_8h_1a48f4a08c693ab4e9bf6f412a1b385ea8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SD_MOSI<sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="comment">//23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="_op_s_8h_1adbf75b6d5089d8a5a4749c75e184d026" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SD_FILE<sp/><sp/><sp/><sp/><sp/>&quot;/InitTest.txt&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GPS<sp/>Definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="_op_s_8h_1af0875ffe69dbe45df3f85c1f720c3eee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>GPS_BAUD<sp/><sp/><sp/><sp/>9600</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="_op_s_8h_1adfce8fce13362d258032e7dcd5792c8d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SERIALGPS<sp/><sp/><sp/>Serial2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="_op_s_8h_1ad0c329adebc27917fc0a4f51079acf6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SAMPLES<sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GLOBAL<sp/>Variable<sp/>Declaration<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>Adafruit_ST7789<sp/><ref refid="_op_s_8h_1a626203b4a6bd96fc5af315008b59696a" kindref="member">tft</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adafruit<sp/>TFT<sp/>class<sp/>for<sp/>ST7789</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_op_s_8h_1a0974771b2fba5718eed6eecd656aac59" kindref="member">ssid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>WiFi<sp/>Credencials<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_op_s_8h_1a59460a3ff2c12443d1022e5cc0fba85c" kindref="member">password</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>TinyGPSPlus<sp/><ref refid="_op_s_8h_1a169c53997a7da1d0fb99aec1b4675ce8" kindref="member">gps</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TinyGPS<sp/>class<sp/>for<sp/>data<sp/>processing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="_op_s_8h_1aeda619d0851532061029b7c7cfbcca14" kindref="member">sysStatus</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Global<sp/>STATUS<sp/>Word</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="_op_s_8h_1af88df719c3754304ec06a339337d06d5" kindref="member">sysError</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Status<sp/>WORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="_op_s_8h_1a08e8d4f4d48da2da0b9a2ae76fb2b0c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stGPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(stGPSDate<sp/>|<sp/>stGPSTime<sp/>|<sp/>stGPSLoc<sp/>|<sp/>stGPSSat)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="_op_s_8h_1aa630f6f3e4a8201838096525c715b6c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stGPSDate<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((sysStatus<sp/>&amp;<sp/>0b0000000000000001)<sp/>&gt;&gt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="_op_s_8h_1a1a1caaa92fb59e8c3cff1c3640d425ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stGPSTime<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((sysStatus<sp/>&amp;<sp/>0b0000000000000010)<sp/>&gt;&gt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="_op_s_8h_1afe4af93993c3c9e8f7843fff47e4dccc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stGPSLoc<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((sysStatus<sp/>&amp;<sp/>0b0000000000000100)<sp/>&gt;&gt;<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="_op_s_8h_1af086262491848f261960bf0720d4313a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stGPSSat<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((sysStatus<sp/>&amp;<sp/>0b0000000000001000)<sp/>&gt;&gt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="_op_s_8h_1af1805e455fb229bfdfaa628723283af2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>setSTGPSDate<sp/><sp/><sp/><sp/>(sysStatus<sp/>|<sp/><sp/>0b0000000000000001)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="_op_s_8h_1adc42f2e7791ca8275157dbb997b08ff8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>resetSTGPSDate<sp/><sp/>(sysStatus<sp/>&amp;<sp/>~0b0000000000000001)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="_op_s_8h_1ab99d405ea5eec324c9a773db658b2da1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>setSTGPSTime<sp/><sp/><sp/><sp/>(sysStatus<sp/>|<sp/><sp/>0b0000000000000010)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="_op_s_8h_1a6b82c71f03c92374f80779a08eeb8e39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>resetSTGPSTime<sp/><sp/>(sysStatus<sp/>&amp;<sp/>~0b0000000000000010)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="_op_s_8h_1aaa12eb6424ef80c7288691472bec4ac2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>setSTGPSLoc<sp/><sp/><sp/><sp/><sp/>(sysStatus<sp/>|<sp/><sp/>0b0000000000000100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="_op_s_8h_1ae53952d7c3086668ff1f5fb810fae161" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>resetSTGPSLoc<sp/><sp/><sp/>(sysStatus<sp/>&amp;<sp/>~0b0000000000000100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="_op_s_8h_1a63b6739c1274e0b3651a4b2a92c23677" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>setSTGPSSat<sp/><sp/><sp/><sp/><sp/>(sysStatus<sp/>|<sp/><sp/>0b0000000000001000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="_op_s_8h_1a49bd522d3fe822fc0b4002bcb73cc803" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>resetSTGPSSat<sp/><sp/><sp/>(sysStatus<sp/>&amp;<sp/>~0b0000000000001000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="_op_s_8h_1a8e5dc897c2040f47c99af43917e9173c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>intervalSTATUS<sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FUNCTION<sp/>Prototypes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1ae9d001f539ecefd5e2e034a6ad776246" kindref="member">LCD_Inic</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1ae75884f299dfd15220383957da6d9ead" kindref="member">LCD_Backgroud</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a1e8ba8d5efbab0a29b49d1af99a05e00" kindref="member">LCD_UpdateStatus</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1aee78f42121e7aab95360f5ea7c5901d0" kindref="member">LCD_UpdateSamples</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Updates<sp/>the<sp/>no.<sp/>samples<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a2abd3681d73ac3a7cf4688bccf1de911" kindref="member">LCD_UpdateNextTime</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>to<sp/>the<sp/>next<sp/>acquisition<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a79cddd5241b6bc3e0a252cd6f79dbfc7" kindref="member">LCD_UpdateOriSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Original<sp/>size<sp/>(NO<sp/>compression)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1ab99c7bad892698d8ea29233589a1fbd6" kindref="member">LCD_UpdateCompSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compressed<sp/>data<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a82455a245be28dfc68632daa6c234cb0" kindref="member">LCD_UpdateDate</ref>(uint16_t,<sp/>uint8_t,<sp/>uint8_t);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Updates<sp/>footer<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a5819307614b440aa72ee8d161039ee5c" kindref="member">LCD_UpdateTime</ref>(uint8_t,<sp/>uint8_t,<sp/>uint8_t);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Updates<sp/>footer<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a87da9f9d16ec376891d625d07458aa20" kindref="member">LCD_UpdateSat</ref>(uint8_t<sp/>s);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>no.<sp/>of<sp/>visible<sp/>satellites</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1aa5fe323b16d95b54985b08cf06d5e4ef" kindref="member">LCD_UpdateWIFIStatus</ref>(uint8_t<sp/>s);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1ab4f2c014e134b5830124e6688f66bea8" kindref="member">LCD_UpdateSDStatus</ref>(uint8_t<sp/>s);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1aee327fd10efe55f51daaf3a5be1cd84d" kindref="member">LCD_UpdateGPSStatus</ref>(uint8_t<sp/>s);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1aa578e64be5caeebb44a3e0a26465836a" kindref="member">WIFI_RefreshSTATUS</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>l);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_op_s_8h_1a4904ab58331456a7675fdf6fb95fc975" kindref="member">GPS_DataCollection</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>OS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/rafam/OneDrive/Documentos/90 - Teste/50 - Teste/Teste_SD/OpS.h"/>
+  </compounddef>
+</doxygen>
