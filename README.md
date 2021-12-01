@@ -4,8 +4,6 @@ Lossless GNSS Compression Algorithm for  Embedded Systems
 ## Descrição
 Este projeto visa estudar, e propor um método de compressão de dados que represente coordenadas geográficas (Global Navigation Satellite System ou GNSS) para comprimir o tamanho de um pacote de dados que descreva uma trajetória, diminuindo o custo energético de uma possível transmissão de informação. O método proposto consiste em utilizar o modelo de coordenadas Degrees/Minutes/Seconds (ou DMS, e ao contrário de Decimal Degrees ou DD) para que seja possível reduzir repetições contidas no mesmo, e aplicar um modelo de compressão efetivo para diminuir seu tamanho. Para estes modelos será analisado o Método de Compressão de Huffman , o método Lempel-Ziv 1977 (LZ77), o método Lempel-Ziv-Welch (LZW) e o método Run-Length Enconding (RLE). Todos os procedimentos serão avaliados com dados de simulação e dados obtidos em ambiente real por uma plataforma desenvolvida para o efeito.
 
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
-
 
 
 ## Estrutura
@@ -22,8 +20,14 @@ Este projeto visa estudar, e propor um método de compressão de dados que repre
 
 ## Bibliotecas utilizadas na prototipagem
 
-[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
+* [mySD][1]
+* [TinyGPS++][2]
+* [ArduinoJson][3]
+
+[1]: https://github.com/nhatuan84/esp32-micro-sdcard "mySD"
+[2]: https://github.com/mikalhart/TinyGPSPlus "TinyGPS++"
+[3]: https://github.com/bblanchon/ArduinoJson "ArduinoJson"
+
 
 ## Protótipo
 <div>
