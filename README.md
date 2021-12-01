@@ -1,6 +1,13 @@
 # CompressionGNSS
 Lossless GNSS Compression Algorithm for  Embedded Systems 
 
+## Descrição
+
+## Estrutura
+
+## Referências de Análises
+
+## Bibliotecas utilizadas na prototipagem
 
 
 cite: Rafael Perez, Valderi R. Q. Leithardt, Sérgio D. Correia, “Lossless Compression
