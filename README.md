@@ -46,7 +46,6 @@ Este projeto visa estudar, e propor um método de compressão de dados que repre
 ## Protótipo
 <div>
   <a href="https://ibb.co/2dFKKq1"><img src="https://i.ibb.co/SB6vvN4/ESP32-SCHEMATICS.jpg" alt="ESP32-SCHEMATICS" border="0"></a>
-  <hr>
   <a href="https://ibb.co/2PBGwB5"><img src="https://i.ibb.co/0Z3Hk3Q/fluxograma.png" alt="fluxograma" border="0"></a>
 </div>
 
