@@ -14,7 +14,7 @@ A
 
 ## Protótipo
 <div>
-  <img height="180em" src="https://ibb.co/2PBGwB5"/>
+  <a href="https://ibb.co/2PBGwB5"><img src="https://i.ibb.co/0Z3Hk3Q/fluxograma.png" alt="fluxograma" border="0"></a>
 </div>
 
 
