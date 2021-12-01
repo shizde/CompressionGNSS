@@ -18,15 +18,29 @@ Este projeto visa estudar, e propor um método de compressão de dados que repre
   * Desenvolvimento em ambiente real 
 
 
-## Bibliotecas utilizadas na prototipagem
+## Recursos de Prototipagen
 
+### Bibliotecas
 * [mySD][1]
 * [TinyGPS++][2]
 * [ArduinoJson][3]
+* [Adafruit_GX][4]
+* [Vector][6]
+* [WiFi][8]
+
+### Headers
+* [Adafruit_ST7789][5]
+* [SPI][7]
 
 [1]: https://github.com/nhatuan84/esp32-micro-sdcard "mySD"
 [2]: https://github.com/mikalhart/TinyGPSPlus "TinyGPS++"
 [3]: https://github.com/bblanchon/ArduinoJson "ArduinoJson"
+[4]: https://github.com/adafruit/Adafruit-GFX-Library "Adafruit_GX"
+[5]: https://github.com/adafruit/Adafruit-ST7735-Library/blob/master/Adafruit_ST7789.h "Adafruit_ST7789"
+[6]: https://github.com/janelia-arduino/Vector "Vector"
+[7]: https://github.com/arduino/ArduinoCore-avr/blob/master/libraries/SPI/src/SPI.h "SPI"
+[8]: https://github.com/arduino-libraries/WiFi "WiFi"
+
 
 
 ## Protótipo
