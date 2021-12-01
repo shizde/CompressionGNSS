@@ -1,0 +1,590 @@
+\hypertarget{_o_s___l_c_d_8cpp}{}\doxysection{C\+:/\+Users/rafam/\+One\+Drive/\+Documentos/90 -\/ Teste/50 -\/ Teste/\+Teste\+\_\+\+SD/\+OS\+\_\+\+LCD.cpp File Reference}
+\label{_o_s___l_c_d_8cpp}\index{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_LCD.cpp@{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_LCD.cpp}}
+{\ttfamily \#include \char`\"{}Op\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}BMP.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\+\_\+\+Text\+Box}} (int X, int Y, int W, int H, int V, char $\ast$L, char B)
+\begin{DoxyCompactList}\small\item\em Writes display text box and writes on it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_aa464db67221a3c67ac4e9585a27333b8}{LCD\+\_\+\+Graph\+Box}} (int X, int Y, int W, int H, int S)
+\begin{DoxyCompactList}\small\item\em Draws ON/\+OFF indication box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}{LCD\+\_\+\+Text}} (int X, int Y, char $\ast$T)
+\begin{DoxyCompactList}\small\item\em LCD Initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_ae9d001f539ecefd5e2e034a6ad776246}{LCD\+\_\+\+Inic}} (void)
+\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}{LCD\+\_\+\+Cross}} (int X, int Y, int W, int H)
+\begin{DoxyCompactList}\small\item\em Draws cross to indicate NOT Status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_ae75884f299dfd15220383957da6d9ead}{LCD\+\_\+\+Backgroud}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the screen background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_aee327fd10efe55f51daaf3a5be1cd84d}{LCD\+\_\+\+Update\+GPSStatus}} (uint8\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Update GPS Status -\/ Validate received gps data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_ab4f2c014e134b5830124e6688f66bea8}{LCD\+\_\+\+Update\+SDStatus}} (uint8\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Update SD Card Status -\/ Validate SD Card functioning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_aa5fe323b16d95b54985b08cf06d5e4ef}{LCD\+\_\+\+Update\+WIFIStatus}} (uint8\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Validate WIFI Status -\/ Validate Wi\+Fi connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a87da9f9d16ec376891d625d07458aa20}{LCD\+\_\+\+Update\+Sat}} (uint8\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Update Number of Satellites that sends data to the GPS Sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_af074aff9e93a240e1a6170c71dad79ff}{LCD\+\_\+\+Update\+Samples}} (int V)
+\begin{DoxyCompactList}\small\item\em Update Number of Samples receveid by GPS sensor and stored. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a60194d4829deb96ff00f185d8b0a8180}{LCD\+\_\+\+Update\+Next\+Time}} (int V)
+\begin{DoxyCompactList}\small\item\em Update timer to receive a new sample and analyze it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a24d375f8648a2d2e14d5144d8cd9e3dc}{LCD\+\_\+\+Update\+Ori\+Size}} (int V)
+\begin{DoxyCompactList}\small\item\em Update and display the size of original trajectory file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_aebdccd95357f44461cfacc9de767b62e}{LCD\+\_\+\+Update\+Comp\+Size}} (int V)
+\begin{DoxyCompactList}\small\item\em Update and display the size of compressed trajectory file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a63e97f0d73463fe4cf183858385bda2a}{LCD\+\_\+\+Update\+Status}} (int S)
+\begin{DoxyCompactList}\small\item\em Update Graphbox that shows if the system is storing data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_a5923a0da47fbebbdce5fca68fe112c56}{LCD\+\_\+\+Update\+Date}} (uint16\+\_\+t y, uint8\+\_\+t m, uint8\+\_\+t d)
+\begin{DoxyCompactList}\small\item\em Update date information received from satellites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s___l_c_d_8cpp_aef508816917ae0500f92c04c9d044290}{LCD\+\_\+\+Update\+Time}} (uint8\+\_\+t h, uint8\+\_\+t m, uint8\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Update time information received from satellites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Adafruit\+\_\+\+ST7789 \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}} = Adafruit\+\_\+\+ST7789(\mbox{\hyperlink{_op_s_8h_a5f4d46ae101b77df78010c506601c87c}{TFT\+\_\+\+CS}}, \mbox{\hyperlink{_op_s_8h_a51529307207622c113ff0d584536be13}{TFT\+\_\+\+DC}}, \mbox{\hyperlink{_op_s_8h_ab40e9918d9141415a47e2a979292309c}{TFT\+\_\+\+RST}})
+\begin{DoxyCompactList}\small\item\em TFT variable initialization ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_ae75884f299dfd15220383957da6d9ead}\label{_o_s___l_c_d_8cpp_ae75884f299dfd15220383957da6d9ead}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_Backgroud@{LCD\_Backgroud}}
+\index{LCD\_Backgroud@{LCD\_Backgroud}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_Backgroud()}{LCD\_Backgroud()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Backgroud (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Draw the screen background. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{158 \{}
+\DoxyCodeLine{159     \textcolor{comment}{// Header}}
+\DoxyCodeLine{160     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillRect(0,0,\mbox{\hyperlink{_op_s_8h_a83af0cb652728913ff58da7133c692ea}{TFT\_WIDTH}},25,ST77XX\_BLUE);}
+\DoxyCodeLine{161     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setCursor(40,5);}
+\DoxyCodeLine{162     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextSize(2);}
+\DoxyCodeLine{163     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.print(\textcolor{stringliteral}{"{}IoT Test Node"{}});}
+\DoxyCodeLine{164     \textcolor{comment}{// brief Delimiters }}
+\DoxyCodeLine{165     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawFastHLine(0, 85,\mbox{\hyperlink{_op_s_8h_a83af0cb652728913ff58da7133c692ea}{TFT\_WIDTH}},ST77XX\_BLUE);}
+\DoxyCodeLine{166     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawFastHLine(0,145,\mbox{\hyperlink{_op_s_8h_a83af0cb652728913ff58da7133c692ea}{TFT\_WIDTH}},ST77XX\_BLUE);}
+\DoxyCodeLine{167     \textcolor{comment}{// brief Footer }}
+\DoxyCodeLine{168     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillRect(0,215,\mbox{\hyperlink{_op_s_8h_a83af0cb652728913ff58da7133c692ea}{TFT\_WIDTH}},25,ST77XX\_BLUE);}
+\DoxyCodeLine{169     \textcolor{comment}{// brief Text Boxes}}
+\DoxyCodeLine{170     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}(125,90,100,50, 10,\textcolor{stringliteral}{"{}Samples"{}},1);                  \textcolor{comment}{// Number of Samples}}
+\DoxyCodeLine{171     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}( 15,90,100,50, 10,\textcolor{stringliteral}{"{}Next Sample"{}},1);              \textcolor{comment}{// brief Time to next sample}}
+\DoxyCodeLine{172     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}(125,150,100,50,10,\textcolor{stringliteral}{"{}Compressed Size"{}},1);          \textcolor{comment}{// brief Original size}}
+\DoxyCodeLine{173     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}( 15,150,100,50,10,\textcolor{stringliteral}{"{}Original Size"{}},1);            \textcolor{comment}{// brief Compressed size}}
+\DoxyCodeLine{174     \textcolor{comment}{// brief Text Satellite }}
+\DoxyCodeLine{175     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillRect(223,58,16,20,ST77XX\_BLUE);}
+\DoxyCodeLine{176     \textcolor{comment}{// brief Images STATUS}}
+\DoxyCodeLine{177     \mbox{\hyperlink{_o_s___l_c_d_8cpp_aa5fe323b16d95b54985b08cf06d5e4ef}{LCD\_UpdateWIFIStatus}}(0);}
+\DoxyCodeLine{178     \mbox{\hyperlink{_o_s___l_c_d_8cpp_ab4f2c014e134b5830124e6688f66bea8}{LCD\_UpdateSDStatus}}(0);}
+\DoxyCodeLine{179     \mbox{\hyperlink{_o_s___l_c_d_8cpp_aee327fd10efe55f51daaf3a5be1cd84d}{LCD\_UpdateGPSStatus}}(0);}
+\DoxyCodeLine{180 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}\label{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_Cross@{LCD\_Cross}}
+\index{LCD\_Cross@{LCD\_Cross}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_Cross()}{LCD\_Cross()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Cross (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H }\end{DoxyParamCaption})}
+
+
+
+Draws cross to indicate NOT Status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & x coordinate to begin the cross \\
+\hline
+{\em Y} & y coordinate to begin the cross \\
+\hline
+{\em W} & width of cross \\
+\hline
+{\em H} & height of cross \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138 \{}
+\DoxyCodeLine{139     \textcolor{comment}{// Line "{}\(\backslash\)"{}}}
+\DoxyCodeLine{140     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X  ,  Y,  X+W,  Y+H,ST77XX\_RED);}
+\DoxyCodeLine{141     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+1,  Y,  X+W,Y+H-\/1,ST77XX\_RED);}
+\DoxyCodeLine{142     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X  ,Y+1,X+W-\/1,  Y+H,ST77XX\_RED);}
+\DoxyCodeLine{143     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+2,  Y,  X+W,Y+H-\/2,ST77XX\_RED);}
+\DoxyCodeLine{144     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X  ,Y+2,X+W-\/2,  Y+H,ST77XX\_RED);}
+\DoxyCodeLine{145     \textcolor{comment}{// Line "{}/"{}}}
+\DoxyCodeLine{146     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+W  ,  Y,  X,  Y+H,ST77XX\_RED);}
+\DoxyCodeLine{147     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+W-\/1,  Y,  X,Y+H-\/1,ST77XX\_RED);}
+\DoxyCodeLine{148     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+W  ,Y+1,X+1,  Y+H,ST77XX\_RED);}
+\DoxyCodeLine{149     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+W-\/2,  Y,  X,Y+H-\/2,ST77XX\_RED);}
+\DoxyCodeLine{150     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.writeLine(X+W  ,Y+2,X+2  ,Y+H,ST77XX\_RED);}
+\DoxyCodeLine{151 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_aa464db67221a3c67ac4e9585a27333b8}\label{_o_s___l_c_d_8cpp_aa464db67221a3c67ac4e9585a27333b8}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_GraphBox@{LCD\_GraphBox}}
+\index{LCD\_GraphBox@{LCD\_GraphBox}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_GraphBox()}{LCD\_GraphBox()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Graph\+Box (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H,  }\item[{int}]{S }\end{DoxyParamCaption})}
+
+
+
+Draws ON/\+OFF indication box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & x coordinate to begin the box \\
+\hline
+{\em Y} & y coordinate to begin the box \\
+\hline
+{\em W} & width of box \\
+\hline
+{\em H} & height of box \\
+\hline
+{\em S} & boolean to display status (ON/\+OFF) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67         \textcolor{keywordtype}{char} *txt;}
+\DoxyCodeLine{68         uint16\_t bC;}
+\DoxyCodeLine{69         uint16\_t tC;}
+\DoxyCodeLine{70         \textcolor{keywordtype}{char} dx;}
+\DoxyCodeLine{71         }
+\DoxyCodeLine{72         \textcolor{comment}{//Outline}}
+\DoxyCodeLine{73         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawRect(X,Y,W,H,ST77XX\_BLUE);}
+\DoxyCodeLine{74         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawRect(X+1,Y+1,W-\/2,H-\/2,ST77XX\_BLUE);}
+\DoxyCodeLine{75             }
+\DoxyCodeLine{76         \textcolor{keywordflow}{if} (S==1)}
+\DoxyCodeLine{77         \{}
+\DoxyCodeLine{78             txt = \textcolor{stringliteral}{"{}ON"{}};}
+\DoxyCodeLine{79             bC = ST77XX\_GREEN;}
+\DoxyCodeLine{80             tC = ST77XX\_BLACK;}
+\DoxyCodeLine{81             dx = 25;}
+\DoxyCodeLine{82         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{83             txt = \textcolor{stringliteral}{"{}OFF"{}};}
+\DoxyCodeLine{84             bC = ST77XX\_RED;}
+\DoxyCodeLine{85             tC = ST77XX\_WHITE;  }
+\DoxyCodeLine{86             dx = 18;}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     }
+\DoxyCodeLine{89         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextSize(4);}
+\DoxyCodeLine{90         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextColor(tC);}
+\DoxyCodeLine{91         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillRect(X+2,Y+2,W-\/4,H-\/4,bC);}
+\DoxyCodeLine{92         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setCursor(X+dx,Y+10);}
+\DoxyCodeLine{93         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.print(txt);}
+\DoxyCodeLine{94     }
+\DoxyCodeLine{95 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_ae9d001f539ecefd5e2e034a6ad776246}\label{_o_s___l_c_d_8cpp_ae9d001f539ecefd5e2e034a6ad776246}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_Inic@{LCD\_Inic}}
+\index{LCD\_Inic@{LCD\_Inic}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_Inic()}{LCD\_Inic()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Inic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.init(\mbox{\hyperlink{_op_s_8h_a83af0cb652728913ff58da7133c692ea}{TFT\_WIDTH}},\mbox{\hyperlink{_op_s_8h_a1c2d2e1cd167f90b809c3450fd6f3434}{TFT\_HEIGHT}},SPI\_MODE2);}
+\DoxyCodeLine{123     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setRotation(2);}
+\DoxyCodeLine{124     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillScreen(ST77XX\_BLACK);}
+\DoxyCodeLine{125     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextColor(ST77XX\_WHITE);}
+\DoxyCodeLine{126     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextWrap(\textcolor{keyword}{false});}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}\label{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_Text@{LCD\_Text}}
+\index{LCD\_Text@{LCD\_Text}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_Text()}{LCD\_Text()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Text (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{char $\ast$}]{T }\end{DoxyParamCaption})}
+
+
+
+LCD Initialization. 
+
+Write text on display.
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & x coordinate to begin the text \\
+\hline
+{\em Y} & y coordinate to begin the text \\
+\hline
+{\em T} & text \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105 \{}
+\DoxyCodeLine{106     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setCursor(X,Y);}
+\DoxyCodeLine{107     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextSize(2);}
+\DoxyCodeLine{108     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextColor(ST77XX\_WHITE,ST77XX\_BLUE);}
+\DoxyCodeLine{109     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.print(T);}
+\DoxyCodeLine{110 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}\label{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_TextBox@{LCD\_TextBox}}
+\index{LCD\_TextBox@{LCD\_TextBox}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_TextBox()}{LCD\_TextBox()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Text\+Box (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H,  }\item[{int}]{V,  }\item[{char $\ast$}]{L,  }\item[{char}]{B }\end{DoxyParamCaption})}
+
+
+
+Writes display text box and writes on it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & x coordinate to begin the Text Box \\
+\hline
+{\em Y} & y coordinate to begin the Text Box \\
+\hline
+{\em W} & width of Text Box \\
+\hline
+{\em H} & height of Text Box \\
+\hline
+{\em V} & text \\
+\hline
+{\em L} & header text \\
+\hline
+{\em B} & background \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{if} (B==1)}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \textcolor{comment}{//Outline}}
+\DoxyCodeLine{40         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawRect(X,Y,W,H,ST77XX\_BLUE);}
+\DoxyCodeLine{41         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawRect(X+1,Y+1,W-\/2,H-\/2,ST77XX\_BLUE);}
+\DoxyCodeLine{42         \textcolor{comment}{//Header}}
+\DoxyCodeLine{43         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextColor(ST77XX\_WHITE);}
+\DoxyCodeLine{44         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.fillRect(X,Y,W,10,ST77XX\_BLUE);}
+\DoxyCodeLine{45         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextSize(1);}
+\DoxyCodeLine{46         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setCursor(X+5,Y);}
+\DoxyCodeLine{47         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.print(L);}
+\DoxyCodeLine{48         \} \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{49         \textcolor{comment}{//Value}}
+\DoxyCodeLine{50         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextColor(ST77XX\_WHITE,ST77XX\_BLACK);}
+\DoxyCodeLine{51         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setCursor(X+45,Y+15);}
+\DoxyCodeLine{52         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.setTextSize(4);}
+\DoxyCodeLine{53         \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.print(V);}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_aebdccd95357f44461cfacc9de767b62e}\label{_o_s___l_c_d_8cpp_aebdccd95357f44461cfacc9de767b62e}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateCompSize@{LCD\_UpdateCompSize}}
+\index{LCD\_UpdateCompSize@{LCD\_UpdateCompSize}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateCompSize()}{LCD\_UpdateCompSize()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Comp\+Size (\begin{DoxyParamCaption}\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Update and display the size of compressed trajectory file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Compressed Data File Size (MBs) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{275 \{}
+\DoxyCodeLine{276     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}(125,150,100,50,V,\textcolor{stringliteral}{"{}"{}},0);}
+\DoxyCodeLine{277 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a5923a0da47fbebbdce5fca68fe112c56}\label{_o_s___l_c_d_8cpp_a5923a0da47fbebbdce5fca68fe112c56}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateDate@{LCD\_UpdateDate}}
+\index{LCD\_UpdateDate@{LCD\_UpdateDate}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateDate()}{LCD\_UpdateDate()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Date (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{y,  }\item[{uint8\+\_\+t}]{m,  }\item[{uint8\+\_\+t}]{d }\end{DoxyParamCaption})}
+
+
+
+Update date information received from satellites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Current year data received from GPS sensor \\
+\hline
+{\em m} & Current month data received from GPS sensor \\
+\hline
+{\em d} & Current day data received from GPS sensor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{297 \{}
+\DoxyCodeLine{298     \textcolor{keywordtype}{char} data[18] = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{299     }
+\DoxyCodeLine{300     \textcolor{comment}{// Once any field of the date is less than 10, the information received would have only one character.}}
+\DoxyCodeLine{301     \textcolor{comment}{// In order to standardize the data, a 0 would be added before the number.}}
+\DoxyCodeLine{302     \textcolor{keywordtype}{char} zyear[2];}
+\DoxyCodeLine{303     \textcolor{keywordtype}{char} zmonth[2];}
+\DoxyCodeLine{304     \textcolor{keywordtype}{char} zday[2];}
+\DoxyCodeLine{305     }
+\DoxyCodeLine{306     }
+\DoxyCodeLine{307     (y < 10) ? (strcpy(zyear, \textcolor{stringliteral}{"{}0"{}}))  : (strcpy(zyear, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{308     (m < 10) ? (strcpy(zmonth, \textcolor{stringliteral}{"{}0"{}})) : (strcpy(zmonth, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{309     (d < 10) ? (strcpy(zday, \textcolor{stringliteral}{"{}0"{}}))   : (strcpy(zday, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{310     }
+\DoxyCodeLine{311     sprintf(data,\textcolor{stringliteral}{"{}\%s\%d/\%s\%d/\%s\%d"{}}, zy, y, zm, m, zd, d);}
+\DoxyCodeLine{312     \mbox{\hyperlink{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}{LCD\_Text}}(5, 220, data);}
+\DoxyCodeLine{313     }
+\DoxyCodeLine{314 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_aee327fd10efe55f51daaf3a5be1cd84d}\label{_o_s___l_c_d_8cpp_aee327fd10efe55f51daaf3a5be1cd84d}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateGPSStatus@{LCD\_UpdateGPSStatus}}
+\index{LCD\_UpdateGPSStatus@{LCD\_UpdateGPSStatus}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateGPSStatus()}{LCD\_UpdateGPSStatus()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+GPSStatus (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Update GPS Status -\/ Validate received gps data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Bit in order to print cross to indicate NOT STATUS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{188 \{}
+\DoxyCodeLine{189     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawBitmap(195,40,BMP\_gps  ,32,32,ST77XX\_BLACK,ST77XX\_WHITE);}
+\DoxyCodeLine{190     }
+\DoxyCodeLine{191     \textcolor{keywordflow}{if} (s==0)}
+\DoxyCodeLine{192     \{}
+\DoxyCodeLine{193         \mbox{\hyperlink{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}{LCD\_Cross}}(195,40,32,32);}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a60194d4829deb96ff00f185d8b0a8180}\label{_o_s___l_c_d_8cpp_a60194d4829deb96ff00f185d8b0a8180}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateNextTime@{LCD\_UpdateNextTime}}
+\index{LCD\_UpdateNextTime@{LCD\_UpdateNextTime}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateNextTime()}{LCD\_UpdateNextTime()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Next\+Time (\begin{DoxyParamCaption}\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Update timer to receive a new sample and analyze it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Time to next sample \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{255 \{}
+\DoxyCodeLine{256     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}( 15,90,100,50, V,\textcolor{stringliteral}{"{}"{}},0);}
+\DoxyCodeLine{257 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a24d375f8648a2d2e14d5144d8cd9e3dc}\label{_o_s___l_c_d_8cpp_a24d375f8648a2d2e14d5144d8cd9e3dc}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateOriSize@{LCD\_UpdateOriSize}}
+\index{LCD\_UpdateOriSize@{LCD\_UpdateOriSize}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateOriSize()}{LCD\_UpdateOriSize()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Ori\+Size (\begin{DoxyParamCaption}\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Update and display the size of original trajectory file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Original Data File Size (MBs) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{265 \{}
+\DoxyCodeLine{266     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}( 15,150,100,50,V,\textcolor{stringliteral}{"{}"{}},0);}
+\DoxyCodeLine{267 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_af074aff9e93a240e1a6170c71dad79ff}\label{_o_s___l_c_d_8cpp_af074aff9e93a240e1a6170c71dad79ff}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateSamples@{LCD\_UpdateSamples}}
+\index{LCD\_UpdateSamples@{LCD\_UpdateSamples}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateSamples()}{LCD\_UpdateSamples()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Samples (\begin{DoxyParamCaption}\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Update Number of Samples receveid by GPS sensor and stored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em V} & Number of samples stored in current process \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245 \{}
+\DoxyCodeLine{246     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a337b856c3a94cfe7f6023adaa014979f}{LCD\_TextBox}}(125,90,100,50, V,\textcolor{stringliteral}{"{}"{}},0);}
+\DoxyCodeLine{247 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a87da9f9d16ec376891d625d07458aa20}\label{_o_s___l_c_d_8cpp_a87da9f9d16ec376891d625d07458aa20}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateSat@{LCD\_UpdateSat}}
+\index{LCD\_UpdateSat@{LCD\_UpdateSat}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateSat()}{LCD\_UpdateSat()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Sat (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Update Number of Satellites that sends data to the GPS Sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Number of satellites reached by the GPS sensor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231 \{}
+\DoxyCodeLine{232     \textcolor{keywordtype}{char} sat[3];}
+\DoxyCodeLine{233     }
+\DoxyCodeLine{234     sprintf(sat,\textcolor{stringliteral}{"{}\%d"{}},s);}
+\DoxyCodeLine{235     \mbox{\hyperlink{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}{LCD\_Text}}(226, 61, sat);}
+\DoxyCodeLine{236 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_ab4f2c014e134b5830124e6688f66bea8}\label{_o_s___l_c_d_8cpp_ab4f2c014e134b5830124e6688f66bea8}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateSDStatus@{LCD\_UpdateSDStatus}}
+\index{LCD\_UpdateSDStatus@{LCD\_UpdateSDStatus}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateSDStatus()}{LCD\_UpdateSDStatus()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+SDStatus (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Update SD Card Status -\/ Validate SD Card functioning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Bit in order to print cross to indicate NOT STATUS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{203 \{}
+\DoxyCodeLine{204     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawBitmap(162,40,BMP\_sd   ,32,32,ST77XX\_BLACK,ST77XX\_WHITE);}
+\DoxyCodeLine{205     \textcolor{keywordflow}{if} (s==0)}
+\DoxyCodeLine{206     \{}
+\DoxyCodeLine{207         \mbox{\hyperlink{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}{LCD\_Cross}}(162,40,32,32);}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a63e97f0d73463fe4cf183858385bda2a}\label{_o_s___l_c_d_8cpp_a63e97f0d73463fe4cf183858385bda2a}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateStatus@{LCD\_UpdateStatus}}
+\index{LCD\_UpdateStatus@{LCD\_UpdateStatus}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateStatus()}{LCD\_UpdateStatus()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Status (\begin{DoxyParamCaption}\item[{int}]{S }\end{DoxyParamCaption})}
+
+
+
+Update Graphbox that shows if the system is storing data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & Bit in order to set the Graph Box STATUS -\/ ON/\+OFF \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{285 \{}
+\DoxyCodeLine{286     \mbox{\hyperlink{_o_s___l_c_d_8cpp_aa464db67221a3c67ac4e9585a27333b8}{LCD\_GraphBox}}(15,30,100,50, S);  }
+\DoxyCodeLine{287 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_aef508816917ae0500f92c04c9d044290}\label{_o_s___l_c_d_8cpp_aef508816917ae0500f92c04c9d044290}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateTime@{LCD\_UpdateTime}}
+\index{LCD\_UpdateTime@{LCD\_UpdateTime}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateTime()}{LCD\_UpdateTime()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{h,  }\item[{uint8\+\_\+t}]{m,  }\item[{uint8\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Update time information received from satellites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Current hour data received from GPS sensor \\
+\hline
+{\em m} & Current minute data received from GPS sensor \\
+\hline
+{\em s} & Current second data received from GPS sensor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{324 \{}
+\DoxyCodeLine{325     \textcolor{keywordtype}{char} hora[18] = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{326     }
+\DoxyCodeLine{327     \textcolor{comment}{// Once any field of the date is less than 10, the information received would have only one character.}}
+\DoxyCodeLine{328     \textcolor{comment}{// In order to standardize the data, a 0 would be added before the number.}}
+\DoxyCodeLine{329     \textcolor{keywordtype}{char} zhour[2];}
+\DoxyCodeLine{330     \textcolor{keywordtype}{char} zmin[2];}
+\DoxyCodeLine{331     \textcolor{keywordtype}{char} zsec[2];}
+\DoxyCodeLine{332         }
+\DoxyCodeLine{333     (h < 10) ? (strcpy(zhour, \textcolor{stringliteral}{"{}0"{}})) : (strcpy(zhour, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{334     (m < 10) ? (strcpy(zmin, \textcolor{stringliteral}{"{}0"{}})) : (strcpy(zmin, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{335     (s < 10) ? (strcpy(zsec, \textcolor{stringliteral}{"{}0"{}})) : (strcpy(zsec, \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{336     }
+\DoxyCodeLine{337     sprintf(hora, \textcolor{stringliteral}{"{}\%s\%d:\%s\%d:\%s\%d"{}}, zhour, h, zmin, m, zsec, s);}
+\DoxyCodeLine{338     \mbox{\hyperlink{_o_s___l_c_d_8cpp_af6eed18d703cce3d5c56c04e6fb6bf5d}{LCD\_Text}}(140, 220, hora);}
+\DoxyCodeLine{339 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_aa5fe323b16d95b54985b08cf06d5e4ef}\label{_o_s___l_c_d_8cpp_aa5fe323b16d95b54985b08cf06d5e4ef}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!LCD\_UpdateWIFIStatus@{LCD\_UpdateWIFIStatus}}
+\index{LCD\_UpdateWIFIStatus@{LCD\_UpdateWIFIStatus}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{LCD\_UpdateWIFIStatus()}{LCD\_UpdateWIFIStatus()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Update\+WIFIStatus (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{s }\end{DoxyParamCaption})}
+
+
+
+Validate WIFI Status -\/ Validate Wi\+Fi connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Bit in order to print cross to indicate NOT STATUS \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{217 \{}
+\DoxyCodeLine{218     \mbox{\hyperlink{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}{tft}}.drawBitmap(125,40,BMP\_cloud,32,32,ST77XX\_BLACK,ST77XX\_WHITE);}
+\DoxyCodeLine{219     \textcolor{keywordflow}{if} (s==0)}
+\DoxyCodeLine{220     \{}
+\DoxyCodeLine{221         \mbox{\hyperlink{_o_s___l_c_d_8cpp_af91fa121c240a97da5ed1c0135c16007}{LCD\_Cross}}(125,40,31,31);}
+\DoxyCodeLine{222     \}}
+\DoxyCodeLine{223 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}\label{_o_s___l_c_d_8cpp_a626203b4a6bd96fc5af315008b59696a}} 
+\index{OS\_LCD.cpp@{OS\_LCD.cpp}!tft@{tft}}
+\index{tft@{tft}!OS\_LCD.cpp@{OS\_LCD.cpp}}
+\doxysubsubsection{\texorpdfstring{tft}{tft}}
+{\footnotesize\ttfamily Adafruit\+\_\+\+ST7789 tft = Adafruit\+\_\+\+ST7789(\mbox{\hyperlink{_op_s_8h_a5f4d46ae101b77df78010c506601c87c}{TFT\+\_\+\+CS}}, \mbox{\hyperlink{_op_s_8h_a51529307207622c113ff0d584536be13}{TFT\+\_\+\+DC}}, \mbox{\hyperlink{_op_s_8h_ab40e9918d9141415a47e2a979292309c}{TFT\+\_\+\+RST}})}
+
+
+
+TFT variable initialization ~\newline
+ 
+
