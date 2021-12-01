@@ -1,0 +1,73 @@
+\hypertarget{_o_s___g_p_s_8cpp}{}\doxysection{C\+:/\+Users/rafam/\+One\+Drive/\+Documentos/90 -\/ Teste/50 -\/ Teste/\+Teste\+\_\+\+SD/\+OS\+\_\+\+GPS.cpp File Reference}
+\label{_o_s___g_p_s_8cpp}\index{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_GPS.cpp@{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_GPS.cpp}}
+{\ttfamily \#include \char`\"{}Op\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_o_s___g_p_s_8cpp_a4904ab58331456a7675fdf6fb95fc975}{GPS\+\_\+\+Data\+Collection}} (void)
+\begin{DoxyCompactList}\small\item\em Receive GPs data and process it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_o_s___g_p_s_8cpp_a4904ab58331456a7675fdf6fb95fc975}\label{_o_s___g_p_s_8cpp_a4904ab58331456a7675fdf6fb95fc975}} 
+\index{OS\_GPS.cpp@{OS\_GPS.cpp}!GPS\_DataCollection@{GPS\_DataCollection}}
+\index{GPS\_DataCollection@{GPS\_DataCollection}!OS\_GPS.cpp@{OS\_GPS.cpp}}
+\doxysubsubsection{\texorpdfstring{GPS\_DataCollection()}{GPS\_DataCollection()}}
+{\footnotesize\ttfamily void GPS\+\_\+\+Data\+Collection (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Receive GPs data and process it. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{comment}{// GPS data collection}}
+\DoxyCodeLine{21     \textcolor{keywordflow}{while} (\mbox{\hyperlink{_op_s_8h_adfce8fce13362d258032e7dcd5792c8d}{SERIALGPS}}.available() > 0)\{}
+\DoxyCodeLine{22         \mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.encode(\mbox{\hyperlink{_op_s_8h_adfce8fce13362d258032e7dcd5792c8d}{SERIALGPS}}.read());}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// Updates STATUS WORD}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.date.isValid())                              \textcolor{comment}{//Date}}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{_op_s_8h_adc42f2e7791ca8275157dbb997b08ff8}{resetSTGPSDate}};}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.date.isUpdated())}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             \mbox{\hyperlink{_op_s_8h_a82455a245be28dfc68632daa6c234cb0}{LCD\_UpdateDate}}(\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.date.year(), \mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.date.month(), \mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.date.day());}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{_op_s_8h_af1805e455fb229bfdfaa628723283af2}{setSTGPSDate}};}
+\DoxyCodeLine{37         \mbox{\hyperlink{_op_s_8h_a82455a245be28dfc68632daa6c234cb0}{LCD\_UpdateDate}}(0,0,0);}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.time.isValid())                              \textcolor{comment}{//Time}}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \mbox{\hyperlink{_op_s_8h_a6b82c71f03c92374f80779a08eeb8e39}{resetSTGPSTime}};}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.time.isUpdated())}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \mbox{\hyperlink{_op_s_8h_a5819307614b440aa72ee8d161039ee5c}{LCD\_UpdateTime}}(\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.time.hour(), \mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.time.minute(), \mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.time.second());}
+\DoxyCodeLine{46         \}}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         \mbox{\hyperlink{_op_s_8h_ab99d405ea5eec324c9a773db658b2da1}{setSTGPSTime}};}
+\DoxyCodeLine{51         \mbox{\hyperlink{_op_s_8h_a5819307614b440aa72ee8d161039ee5c}{LCD\_UpdateTime}}(0,0,0);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.satellites.isValid())}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.satellites.isUpdated())}
+\DoxyCodeLine{58         \{}
+\DoxyCodeLine{59             \mbox{\hyperlink{_op_s_8h_a87da9f9d16ec376891d625d07458aa20}{LCD\_UpdateSat}}(\mbox{\hyperlink{_op_s_8h_a169c53997a7da1d0fb99aec1b4675ce8}{gps}}.satellites.value());}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{62     \{}
+\DoxyCodeLine{63         \mbox{\hyperlink{_op_s_8h_a87da9f9d16ec376891d625d07458aa20}{LCD\_UpdateSat}}(0);}
+\DoxyCodeLine{64     \}   }
+\DoxyCodeLine{65     }
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}

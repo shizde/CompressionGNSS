@@ -1,0 +1,92 @@
+\hypertarget{_o_s___wi_fi_8cpp}{}\doxysection{C\+:/\+Users/rafam/\+One\+Drive/\+Documentos/90 -\/ Teste/50 -\/ Teste/\+Teste\+\_\+\+SD/\+OS\+\_\+\+Wi\+Fi.cpp File Reference}
+\label{_o_s___wi_fi_8cpp}\index{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_WiFi.cpp@{C:/Users/rafam/OneDrive/Documentos/90 -\/ Teste/50 -\/ Teste/Teste\_SD/OS\_WiFi.cpp}}
+{\ttfamily \#include \char`\"{}Op\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{_o_s___wi_fi_8cpp_aa578e64be5caeebb44a3e0a26465836a}{WIFI\+\_\+\+Refresh\+STATUS}} (unsigned long c, unsigned long l)
+\begin{DoxyCompactList}\small\item\em Verify if the Wi\+Fi is connected and update status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{_o_s___wi_fi_8cpp_a0974771b2fba5718eed6eecd656aac59}{ssid}} = \char`\"{}Redmi 9T\char`\"{}
+\begin{DoxyCompactList}\small\item\em SSID Network ~\newline
+ \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{_o_s___wi_fi_8cpp_a59460a3ff2c12443d1022e5cc0fba85c}{password}} = \char`\"{}chocolate\char`\"{}
+\begin{DoxyCompactList}\small\item\em Network Password ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_o_s___wi_fi_8cpp_aa578e64be5caeebb44a3e0a26465836a}\label{_o_s___wi_fi_8cpp_aa578e64be5caeebb44a3e0a26465836a}} 
+\index{OS\_WiFi.cpp@{OS\_WiFi.cpp}!WIFI\_RefreshSTATUS@{WIFI\_RefreshSTATUS}}
+\index{WIFI\_RefreshSTATUS@{WIFI\_RefreshSTATUS}!OS\_WiFi.cpp@{OS\_WiFi.cpp}}
+\doxysubsubsection{\texorpdfstring{WIFI\_RefreshSTATUS()}{WIFI\_RefreshSTATUS()}}
+{\footnotesize\ttfamily unsigned long WIFI\+\_\+\+Refresh\+STATUS (\begin{DoxyParamCaption}\item[{unsigned long}]{c,  }\item[{unsigned long}]{l }\end{DoxyParamCaption})}
+
+
+
+Verify if the Wi\+Fi is connected and update status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Current time clock \\
+\hline
+{\em l} & Last updated time clock \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} r;}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (c -\/ l >=\mbox{\hyperlink{_op_s_8h_a8e5dc897c2040f47c99af43917e9173c}{intervalSTATUS}}) \{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{if} (WiFi.status() != WL\_CONNECTED)                  \textcolor{comment}{// WiFi with 2 minutes refresh interval}}
+\DoxyCodeLine{36         \{}
+\DoxyCodeLine{37             \mbox{\hyperlink{_op_s_8h_aa5fe323b16d95b54985b08cf06d5e4ef}{LCD\_UpdateWIFIStatus}}(0);}
+\DoxyCodeLine{38             \mbox{\hyperlink{_op_s_8h_a60ba565131d290d6ebd1eda08c43432a}{SERIALDEBUG}}.println(\textcolor{stringliteral}{"{}WiFi Lost connection"{}});}
+\DoxyCodeLine{39             WiFi.begin(\mbox{\hyperlink{_o_s___wi_fi_8cpp_a0974771b2fba5718eed6eecd656aac59}{ssid}}, \mbox{\hyperlink{_o_s___wi_fi_8cpp_a59460a3ff2c12443d1022e5cc0fba85c}{password}});}
+\DoxyCodeLine{40             \textcolor{keywordflow}{while} (WiFi.status() != WL\_CONNECTED)           \textcolor{comment}{// Waits for a new connection}}
+\DoxyCodeLine{41             \{}
+\DoxyCodeLine{42                 delay(500);}
+\DoxyCodeLine{43                 \mbox{\hyperlink{_op_s_8h_a60ba565131d290d6ebd1eda08c43432a}{SERIALDEBUG}}.print(\textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{44             \}}
+\DoxyCodeLine{45             \mbox{\hyperlink{_op_s_8h_aa5fe323b16d95b54985b08cf06d5e4ef}{LCD\_UpdateWIFIStatus}}(1);}
+\DoxyCodeLine{46             \mbox{\hyperlink{_op_s_8h_a60ba565131d290d6ebd1eda08c43432a}{SERIALDEBUG}}.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{47             \mbox{\hyperlink{_op_s_8h_a60ba565131d290d6ebd1eda08c43432a}{SERIALDEBUG}}.println(\textcolor{stringliteral}{"{}WiFi reconnected"{}});}
+\DoxyCodeLine{48             r = c;}
+\DoxyCodeLine{49         \}\textcolor{keywordflow}{else} }
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{_op_s_8h_aa5fe323b16d95b54985b08cf06d5e4ef}{LCD\_UpdateWIFIStatus}}(1);}
+\DoxyCodeLine{52             r = l;}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54         }
+\DoxyCodeLine{55     \}\textcolor{keywordflow}{else} r = l;}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_o_s___wi_fi_8cpp_a59460a3ff2c12443d1022e5cc0fba85c}\label{_o_s___wi_fi_8cpp_a59460a3ff2c12443d1022e5cc0fba85c}} 
+\index{OS\_WiFi.cpp@{OS\_WiFi.cpp}!password@{password}}
+\index{password@{password}!OS\_WiFi.cpp@{OS\_WiFi.cpp}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily char$\ast$ password = \char`\"{}chocolate\char`\"{}}
+
+
+
+Network Password ~\newline
+ 
+
+\mbox{\Hypertarget{_o_s___wi_fi_8cpp_a0974771b2fba5718eed6eecd656aac59}\label{_o_s___wi_fi_8cpp_a0974771b2fba5718eed6eecd656aac59}} 
+\index{OS\_WiFi.cpp@{OS\_WiFi.cpp}!ssid@{ssid}}
+\index{ssid@{ssid}!OS\_WiFi.cpp@{OS\_WiFi.cpp}}
+\doxysubsubsection{\texorpdfstring{ssid}{ssid}}
+{\footnotesize\ttfamily char$\ast$ ssid = \char`\"{}Redmi 9T\char`\"{}}
+
+
+
+SSID Network ~\newline
+ 
+
