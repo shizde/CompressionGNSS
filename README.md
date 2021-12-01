@@ -8,6 +8,15 @@ A
 
 ## Estrutura
 
+* 01.Analise
+  * Sistema de análise dos dados e métodos
+* 02.SimulacaoPreCompressao
+  * Simulação de um ambiente real e das funcionalidades a serem executadas. 
+* 03.SimulacaoPosCompressao
+  * Verificação dos dados de simulação 
+* 04.Prototipo
+  * Desenvolvimento em ambiente real 
+
 ## Referências de Análises
 
 ## Bibliotecas utilizadas na prototipagem
