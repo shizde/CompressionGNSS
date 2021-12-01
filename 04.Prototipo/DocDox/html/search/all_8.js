@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['samples_33',['SAMPLES',['../_op_s_8h.html#ad0c329adebc27917fc0a4f51079acf6a',1,'OpS.h']]],
+  ['sd_5fclk_34',['SD_CLK',['../_op_s_8h.html#a8dcea357504f4ef30b778aca40169c36',1,'OpS.h']]],
+  ['sd_5ffile_35',['SD_FILE',['../_op_s_8h.html#adbf75b6d5089d8a5a4749c75e184d026',1,'OpS.h']]],
+  ['sd_5fmiso_36',['SD_MISO',['../_op_s_8h.html#afb087f7305dc744753834627d3f495d7',1,'OpS.h']]],
+  ['sd_5fmosi_37',['SD_MOSI',['../_op_s_8h.html#a48f4a08c693ab4e9bf6f412a1b385ea8',1,'OpS.h']]],
+  ['sd_5fss_38',['SD_SS',['../_op_s_8h.html#aa867b0a73a4f34f297fde887eb0e02d3',1,'OpS.h']]],
+  ['serialdebug_39',['SERIALDEBUG',['../_op_s_8h.html#a60ba565131d290d6ebd1eda08c43432a',1,'OpS.h']]],
+  ['serialgps_40',['SERIALGPS',['../_op_s_8h.html#adfce8fce13362d258032e7dcd5792c8d',1,'OpS.h']]],
+  ['setstgpsdate_41',['setSTGPSDate',['../_op_s_8h.html#af1805e455fb229bfdfaa628723283af2',1,'OpS.h']]],
+  ['setstgpsloc_42',['setSTGPSLoc',['../_op_s_8h.html#aaa12eb6424ef80c7288691472bec4ac2',1,'OpS.h']]],
+  ['setstgpssat_43',['setSTGPSSat',['../_op_s_8h.html#a63b6739c1274e0b3651a4b2a92c23677',1,'OpS.h']]],
+  ['setstgpstime_44',['setSTGPSTime',['../_op_s_8h.html#ab99d405ea5eec324c9a773db658b2da1',1,'OpS.h']]],
+  ['ssid_45',['ssid',['../_op_s_8h.html#a0974771b2fba5718eed6eecd656aac59',1,'ssid():&#160;OS_WiFi.cpp'],['../_o_s___wi_fi_8cpp.html#a0974771b2fba5718eed6eecd656aac59',1,'ssid():&#160;OS_WiFi.cpp']]],
+  ['stgps_46',['stGPS',['../_op_s_8h.html#a08e8d4f4d48da2da0b9a2ae76fb2b0c5',1,'OpS.h']]],
+  ['stgpsdate_47',['stGPSDate',['../_op_s_8h.html#aa630f6f3e4a8201838096525c715b6c0',1,'OpS.h']]],
+  ['stgpsloc_48',['stGPSLoc',['../_op_s_8h.html#afe4af93993c3c9e8f7843fff47e4dccc',1,'OpS.h']]],
+  ['stgpssat_49',['stGPSSat',['../_op_s_8h.html#af086262491848f261960bf0720d4313a',1,'OpS.h']]],
+  ['stgpstime_50',['stGPSTime',['../_op_s_8h.html#a1a1caaa92fb59e8c3cff1c3640d425ce',1,'OpS.h']]],
+  ['syserror_51',['sysError',['../_op_s_8h.html#af88df719c3754304ec06a339337d06d5',1,'OpS.h']]],
+  ['sysstatus_52',['sysStatus',['../_op_s_8h.html#aeda619d0851532061029b7c7cfbcca14',1,'OpS.h']]]
+];

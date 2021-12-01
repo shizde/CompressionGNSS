@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['samples_100',['SAMPLES',['../_op_s_8h.html#ad0c329adebc27917fc0a4f51079acf6a',1,'OpS.h']]],
+  ['sd_5fclk_101',['SD_CLK',['../_op_s_8h.html#a8dcea357504f4ef30b778aca40169c36',1,'OpS.h']]],
+  ['sd_5ffile_102',['SD_FILE',['../_op_s_8h.html#adbf75b6d5089d8a5a4749c75e184d026',1,'OpS.h']]],
+  ['sd_5fmiso_103',['SD_MISO',['../_op_s_8h.html#afb087f7305dc744753834627d3f495d7',1,'OpS.h']]],
+  ['sd_5fmosi_104',['SD_MOSI',['../_op_s_8h.html#a48f4a08c693ab4e9bf6f412a1b385ea8',1,'OpS.h']]],
+  ['sd_5fss_105',['SD_SS',['../_op_s_8h.html#aa867b0a73a4f34f297fde887eb0e02d3',1,'OpS.h']]],
+  ['serialdebug_106',['SERIALDEBUG',['../_op_s_8h.html#a60ba565131d290d6ebd1eda08c43432a',1,'OpS.h']]],
+  ['serialgps_107',['SERIALGPS',['../_op_s_8h.html#adfce8fce13362d258032e7dcd5792c8d',1,'OpS.h']]],
+  ['setstgpsdate_108',['setSTGPSDate',['../_op_s_8h.html#af1805e455fb229bfdfaa628723283af2',1,'OpS.h']]],
+  ['setstgpsloc_109',['setSTGPSLoc',['../_op_s_8h.html#aaa12eb6424ef80c7288691472bec4ac2',1,'OpS.h']]],
+  ['setstgpssat_110',['setSTGPSSat',['../_op_s_8h.html#a63b6739c1274e0b3651a4b2a92c23677',1,'OpS.h']]],
+  ['setstgpstime_111',['setSTGPSTime',['../_op_s_8h.html#ab99d405ea5eec324c9a773db658b2da1',1,'OpS.h']]],
+  ['stgps_112',['stGPS',['../_op_s_8h.html#a08e8d4f4d48da2da0b9a2ae76fb2b0c5',1,'OpS.h']]],
+  ['stgpsdate_113',['stGPSDate',['../_op_s_8h.html#aa630f6f3e4a8201838096525c715b6c0',1,'OpS.h']]],
+  ['stgpsloc_114',['stGPSLoc',['../_op_s_8h.html#afe4af93993c3c9e8f7843fff47e4dccc',1,'OpS.h']]],
+  ['stgpssat_115',['stGPSSat',['../_op_s_8h.html#af086262491848f261960bf0720d4313a',1,'OpS.h']]],
+  ['stgpstime_116',['stGPSTime',['../_op_s_8h.html#a1a1caaa92fb59e8c3cff1c3640d425ce',1,'OpS.h']]]
+];
