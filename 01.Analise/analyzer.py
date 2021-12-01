@@ -8,7 +8,7 @@ import re
 import os
 
 # Definitions
-location = '/home/rperez/Dropbox/Projects/packJson/01 - Compactado'
+location = 'PATH TO FILES'
 files_in_dir = []
 
 # r=>root, d=>directories, f=>files
