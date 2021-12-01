@@ -7,9 +7,9 @@
 #include <cstring>
 #include <sstream>
 
-#define OPEN_FILE "NMEAtesteWE.txt"
+#define OPEN_FILE "NMEA2JSON.txt"
 
-#define FILENAME "NMEAtesteWE"
+#define FILENAME "NMEA2JSON"
 
 void print_vector(std::vector<std::string> print_vector){
     for (size_t i = 0; i < print_vector.size(); i++)
