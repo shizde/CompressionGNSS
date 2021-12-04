@@ -1,8 +1,8 @@
 # CompressionGNSS
 Lossless GNSS Compression Algorithm for  Embedded Systems 
 
-## Descrição
-Este projeto visa estudar e propor um método de compressão de dados que represente coordenadas geográficas (Global Navigation Satellite System ou GNSS) para comprimir o tamanho de um pacote de dados que descreva uma trajetória, diminuindo o custo energético de uma possível transmissão de informação. O método proposto consiste em utilizar o modelo de coordenadas Degrees/Minutes/Seconds (ou DMS, e ao contrário de Decimal Degrees ou DD) para que seja possível reduzir repetições contidas no mesmo, e aplicar um modelo de compressão efetivo para diminuir seu tamanho. Para estes modelos será analisado o Método de Compressão de Huffman , o método Lempel-Ziv 1977 (LZ77), o método Lempel-Ziv-Welch (LZW) e o método Run-Length Enconding (RLE). Todos os procedimentos serão avaliados com dados de simulação e dados obtidos em ambiente real por uma plataforma desenvolvida para o efeito.
+## Description
+This project aims to study and propose a method of data compression that represents geographic coordinates (Global Navigation Satellite System or GNSS) to compress the size of a data packet that describes a trajectory, reducing the energy cost of a possible transmission of information. The proposed method is to use the Degrees/Minutes/Seconds (or DMS, and unlike Decimal Degrees or DD) coordinate model so that you can reduce repetitions contained in it, and apply an effective compression model to decrease its size. For these models, the Huffman Compression Method, the Lempel-Ziv 1977 method (LZ77), the Lempel-Ziv-Welch (LZW) method and the Run-Length Enconding (RLE) method will be analyzed. All procedures will be evaluated with simulation data and data obtained in real environment by a platform developed for this purpose.
 
 
 
